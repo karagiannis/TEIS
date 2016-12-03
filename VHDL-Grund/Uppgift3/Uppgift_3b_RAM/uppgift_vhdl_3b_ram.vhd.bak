@@ -1,0 +1,57 @@
+-----------------
+-- Company: TEIS AB
+-- Engineer: AndrÃ© Norberg
+-- 
+-- Create Date: 2015 august 25
+-- Design Name: Filename.vhd
+-- Target Devices: ALTERA Cyclone IV EP4CE115F29C7
+-- Tool versions: Quartus v15.0 and ModelSim 
+-- Testbench file: Filename_Testbench.vht
+-- Do file: Filename_Do_File.do
+-- Description:
+-- 	Enter the project description here!
+-- 
+-- In_signals:
+-- CLOCK_50_in 	-- 50MHz input clock
+-- KEY_in 			-- 4 button keys
+-- 
+-- Out_signals:
+-- LEDG_out 		-- 8 green leds located at LEDG
+--
+-- Validated with "ModelSim - Altera" and verified with DE2-115 board
+-- by AndrÃ© Norberg
+------------------
+
+ibrary ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+
+entity uppgift_vhdl_3b_ram is
+port (
+	clk : in std_logic; -- Active on positive edge from key
+	addr_in : in std_logic_vector(2 downto 0); -- address in slide switches
+	data_in : in std_logic_vector(1 downto 0); -- data in slide switches
+	we_in : in std_logic; -- from slide switches
+	q_out : out std_logic_vector(1 downto 0) -- data out to leds
+);
+end entity;
+
+ARCHITECTURE logic OF uppgift_vhdl_3b_ram is
+	TYPE mem_type IS ARRAY (0 TO 7) OF
+	std_logic_vector (1 DOWNTO 0);
+	SIGNAL mem: mem_type;
+BEGIN'
+
+PROCESS (clk) BEGIN
+
+	if rising_edge(clock) then
+		if (wren = '1') then
+			mem(conv_integer(address)) <= data;
+	   end if;
+      q <= mem(conv_integer(address));
+end if;;
+END PROCESS;
+END ARCHITECTURE logic;
+

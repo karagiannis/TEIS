@@ -1,0 +1,9 @@
+|uppgift_vhdl_3b_ROM
+clk => q_out[0]~reg0.CLK
+clk => q_out[1]~reg0.CLK
+addr_in[0] => mem.RADDR
+addr_in[1] => mem.RADDR1
+q_out[0] << q_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_out[1] << q_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

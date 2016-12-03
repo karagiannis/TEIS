@@ -1,0 +1,213 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -2.549
+TNS   : -37.233
+
+Type  : Slow 1100mV 85C Model Setup 'SW[9]'
+Slack : -2.525
+TNS   : -2.525
+
+Type  : Slow 1100mV 85C Model Setup 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : -1.680
+TNS   : -78.162
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : 0.514
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'SW[9]'
+Slack : 1.330
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
+Slack : -2.392
+TNS   : -48.733
+
+Type  : Slow 1100mV 85C Model Recovery 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : -2.338
+TNS   : -130.163
+
+Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
+Slack : 0.823
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : 1.539
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : -0.394
+TNS   : -33.059
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -12.697
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'SW[9]'
+Slack : 0.272
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'SW[9]'
+Slack : -2.688
+TNS   : -2.688
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.191
+TNS   : -37.202
+
+Type  : Slow 1100mV 0C Model Setup 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : -1.585
+TNS   : -75.143
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : 0.498
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'SW[9]'
+Slack : 1.424
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : -2.313
+TNS   : -129.110
+
+Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
+Slack : -2.080
+TNS   : -42.184
+
+Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : 1.544
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : -0.394
+TNS   : -32.890
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -13.608
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'SW[9]'
+Slack : 0.251
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -1.936
+TNS   : -13.215
+
+Type  : Fast 1100mV 85C Model Setup 'SW[9]'
+Slack : -0.912
+TNS   : -0.912
+
+Type  : Fast 1100mV 85C Model Setup 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : -0.850
+TNS   : -29.364
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : 0.233
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'SW[9]'
+Slack : 0.560
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
+Slack : -1.889
+TNS   : -38.403
+
+Type  : Fast 1100mV 85C Model Recovery 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : -1.508
+TNS   : -83.706
+
+Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
+Slack : 0.471
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : 0.707
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.093
+TNS   : -2.171
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'SW[9]'
+Slack : 0.026
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : 0.085
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -1.670
+TNS   : -11.379
+
+Type  : Fast 1100mV 0C Model Setup 'SW[9]'
+Slack : -0.840
+TNS   : -0.840
+
+Type  : Fast 1100mV 0C Model Setup 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : -0.683
+TNS   : -22.666
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.173
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : 0.207
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'SW[9]'
+Slack : 0.521
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
+Slack : -1.609
+TNS   : -32.739
+
+Type  : Fast 1100mV 0C Model Recovery 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : -1.501
+TNS   : -83.828
+
+Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : 0.716
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.089
+TNS   : -2.091
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'SW[9]'
+Slack : 0.019
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'INPUT_FILTER:b2v_inst_INPUT_FILTER|Clk_out'
+Slack : 0.099
+TNS   : 0.000
+
+------------------------------------------------------------

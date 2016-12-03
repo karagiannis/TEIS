@@ -1,0 +1,25 @@
+Quartus Prime Archive log --	C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/CPU_VHDL_project_DE1.qarlog
+
+Archive:	C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/CPU_VHDL_project_DE1.qar
+Date:		Sun Oct 30 02:38:06 2016
+Quartus Prime		16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ADDR_BUS_DECODER.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/CPU_VHDL_project_DE1.cdf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/CPU_VHDL_project_DE1.qpf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/CPU_VHDL_project_DE1.qsf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/CPU_VHDL_project_DE1_assignment_defaults.qdf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/CPU_VHDL_projekt.bdf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/INPUT_FILTER.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/OUT_LED.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ROM_VHDL.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER_CPU_STATE.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/STATUS_DISPLAY_SYSTEM.bdf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/assignment_defaults.qdf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simple_VHDL_CPU.vhd
+	======= Total: 14 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

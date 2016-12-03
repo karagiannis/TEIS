@@ -1,0 +1,18 @@
+Quartus Prime Archive log --	C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift3/uppgift_vhdl_3a.qarlog
+
+Archive:	C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift3/uppgift_vhdl_3a.qar
+Date:		Mon Oct 03 00:29:50 2016
+Quartus Prime		16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift3/output_files/Chain2.cdf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift3/output_files/Chain3.cdf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift3/simulation/modelsim/uppgift_vhdl_3a.vht
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift3/uppgift_vhdl_3a.qpf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift3/uppgift_vhdl_3a.qsf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift3/uppgift_vhdl_3a.vhd
+c:/altera_lite/16.0/quartus/bin64/assignment_defaults.qdf
+	======= Total: 7 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

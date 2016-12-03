@@ -1,0 +1,29 @@
+|uppgift_vhdl_5_extra
+clk => ledr2_wrong_sequence~reg0.CLK
+clk => ledr1_locked~reg0.CLK
+clk => ledr0_unlocked~reg0.CLK
+clk => old_key2.CLK
+clk => old_key1.CLK
+clk => old_key0.CLK
+clk => door_lock_state.CLK
+clk => key_input_state~6.DATAIN
+reset_n => old_key2.PRESET
+reset_n => old_key1.PRESET
+reset_n => old_key0.PRESET
+reset_n => ledr2_wrong_sequence~reg0.ACLR
+reset_n => ledr1_locked~reg0.PRESET
+reset_n => ledr0_unlocked~reg0.ACLR
+reset_n => door_lock_state.PRESET
+reset_n => key_input_state~8.DATAIN
+key0 => button_state_machine.IN1
+key0 => button_state_machine.IN1
+key1 => button_state_machine.IN1
+key2 => button_state_machine.IN1
+key2 => button_state_machine.IN1
+key3_lock_command => Selector2.IN5
+key3_lock_command => Selector3.IN3
+ledr0_unlocked << ledr0_unlocked~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ledr1_locked << ledr1_locked~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ledr2_wrong_sequence << ledr2_wrong_sequence~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

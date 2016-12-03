@@ -1,0 +1,64 @@
+# Reading C:/altera_lite/16.0/modelsim_ase/tcl/vsim/pref.tcl
+# do uppgift_vhdl_3b_ROM_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying C:/altera_lite/16.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/uppgift_vhdl_3b_ROM.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 21:10:17 on Oct 05,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/uppgift_vhdl_3b_ROM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uppgift_vhdl_3b_ROM
+# -- Compiling architecture logic of uppgift_vhdl_3b_ROM
+# End time: 21:10:17 on Oct 05,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/simulation/modelsim/uppgift_vhdl_3b_ROM.vht}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 21:10:17 on Oct 05,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/simulation/modelsim/uppgift_vhdl_3b_ROM.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity uppgift_vhdl_3b_ROM_vhd_tst
+# -- Compiling architecture uppgift_vhdl_3b_ROM_arch of uppgift_vhdl_3b_ROM_vhd_tst
+# ** Warning: C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/simulation/modelsim/uppgift_vhdl_3b_ROM.vht(59): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/simulation/modelsim/uppgift_vhdl_3b_ROM.vht(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/simulation/modelsim/uppgift_vhdl_3b_ROM.vht(65): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/simulation/modelsim/uppgift_vhdl_3b_ROM.vht(68): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/simulation/modelsim/uppgift_vhdl_3b_ROM.vht(72): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 21:10:17 on Oct 05,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 5
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  uppgift_vhdl_3b_ROM_vhd_tst
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" uppgift_vhdl_3b_ROM_vhd_tst 
+# Start time: 21:10:17 on Oct 05,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.uppgift_vhdl_3b_rom_vhd_tst(uppgift_vhdl_3b_rom_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.uppgift_vhdl_3b_rom(logic)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 us
+# End time: 21:12:55 on Oct 05,2016, Elapsed time: 0:02:38
+# Errors: 0, Warnings: 0

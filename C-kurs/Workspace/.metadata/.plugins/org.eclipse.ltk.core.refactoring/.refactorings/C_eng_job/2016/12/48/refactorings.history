@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;C_eng_job/font8x8_basic&apos; to &apos;font8x8_basic.h&apos;" description="Rename resource &apos;font8x8_basic&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="font8x8_basic" name="font8x8_basic.h" stamp="1480785329223" updateReferences="true"/>
+</session>

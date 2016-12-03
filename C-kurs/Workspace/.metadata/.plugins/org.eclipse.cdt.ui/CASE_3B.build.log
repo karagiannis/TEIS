@@ -1,0 +1,9 @@
+21:21:39 **** Incremental Build of configuration Nios II for project CASE_3B ****
+make all 
+Info: Building ../CASE_3B_bsp/
+C:/altera_lite/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../CASE_3B_bsp/
+[BSP build complete]
+[CASE_3B build complete]
+
+21:21:39 Build Finished (took 803ms)
+

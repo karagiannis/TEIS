@@ -1,0 +1,13 @@
+
+State Machine - |CPU_VHDL_projekt|simple_VHDL_CPU:instansiate_VHDL_CPU|next_state
+Name next_state.STORE_2_state next_state.STORE_1_state next_state.Execute_STORE_state next_state.Execute_LOAD_state next_state.Execute_JMP_state next_state.Execute_NOP_state next_state.Decode_state next_state.Fetch_3_state next_state.Fetch_2_state next_state.Fetch_1_state 
+next_state.Fetch_1_state 0 0 0 0 0 0 0 0 0 0 
+next_state.Fetch_2_state 0 0 0 0 0 0 0 0 1 1 
+next_state.Fetch_3_state 0 0 0 0 0 0 0 1 0 1 
+next_state.Decode_state 0 0 0 0 0 0 1 0 0 1 
+next_state.Execute_NOP_state 0 0 0 0 0 1 0 0 0 1 
+next_state.Execute_JMP_state 0 0 0 0 1 0 0 0 0 1 
+next_state.Execute_LOAD_state 0 0 0 1 0 0 0 0 0 1 
+next_state.Execute_STORE_state 0 0 1 0 0 0 0 0 0 1 
+next_state.STORE_1_state 0 1 0 0 0 0 0 0 0 1 
+next_state.STORE_2_state 1 0 0 0 0 0 0 0 0 1 

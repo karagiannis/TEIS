@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift4/Uppgift4_Mealy_Moore/simulation/modelsim
+Euppgift_vhdl_4_mealy_moore
+Z1 w1475964756
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift4/Uppgift4_Mealy_Moore/uppgift_vhdl_4_Mealy_Moore.vhd
+Z7 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift4/Uppgift4_Mealy_Moore/uppgift_vhdl_4_Mealy_Moore.vhd
+l0
+L33
+Vn3Wz;cJg[>[5RF`@?2:z81
+!s100 bG9ocn_7eYQzXbiC8;UN@2
+Z8 OV;C;10.4d;61
+31
+Z9 !s110 1475965415
+!i10b 1
+Z10 !s108 1475965415.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift4/Uppgift4_Mealy_Moore/uppgift_vhdl_4_Mealy_Moore.vhd|
+Z12 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift4/Uppgift4_Mealy_Moore/uppgift_vhdl_4_Mealy_Moore.vhd|
+!i113 1
+Z13 o-93 -work work
+Z14 tExplicit 1
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 26 uppgift_vhdl_4_mealy_moore 0 22 n3Wz;cJg[>[5RF`@?2:z81
+l53
+L46
+VM6diUgLdd_@h<jIAS0;XI2
+!s100 0WmB2a4NL8gzjh3iLYoFU0
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Euppgift_vhdl_4_mealy_moore_vhd_tst
+Z15 w1475965277
+R4
+R5
+R0
+Z16 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift4/Uppgift4_Mealy_Moore/simulation/modelsim/uppgift_vhdl_4_Mealy_Moore.vht
+Z17 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift4/Uppgift4_Mealy_Moore/simulation/modelsim/uppgift_vhdl_4_Mealy_Moore.vht
+l0
+L31
+V6`dggzW9SYSiK;7l2N4C82
+!s100 ^G?c3?:?8VP`B`9O715CT0
+R8
+31
+R9
+!i10b 1
+R10
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift4/Uppgift4_Mealy_Moore/simulation/modelsim/uppgift_vhdl_4_Mealy_Moore.vht|
+Z19 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift4/Uppgift4_Mealy_Moore/simulation/modelsim/uppgift_vhdl_4_Mealy_Moore.vht|
+!i113 1
+R13
+R14
+Auppgift_vhdl_4_mealy_moore_arch
+R4
+R5
+DEx4 work 34 uppgift_vhdl_4_mealy_moore_vhd_tst 0 22 6`dggzW9SYSiK;7l2N4C82
+l52
+L33
+VZ61;>lKmeLL?eZJ8zI@l;0
+!s100 Y>98G1@?cd1S3Z3L@MaiY3
+R8
+31
+R9
+!i10b 1
+R10
+R18
+R19
+!i113 1
+R13
+R14

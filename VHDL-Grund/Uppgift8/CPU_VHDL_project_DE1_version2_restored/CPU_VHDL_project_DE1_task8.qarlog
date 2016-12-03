@@ -1,0 +1,26 @@
+Quartus Prime Archive log --	C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/CPU_VHDL_project_DE1_task8.qarlog
+
+Archive:	C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/CPU_VHDL_project_DE1_task8.qar
+Date:		Sun Nov 06 21:20:45 2016
+Quartus Prime		16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/ADDR_BUS_DECODER.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/CPU_VHDL_project_DE1.qpf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/CPU_VHDL_project_DE1.qsf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/CPU_VHDL_project_DE1_assignment_defaults.qdf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/CPU_VHDL_projekt.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/INPUT_FILTER.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/OUT_LED.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/ROM_VHDL.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/SJU_SEG_DISPLAYER.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/SJU_SEG_DISPLAYER_CPU_STATE.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/STATUS_DISPLAY_SYSTEM.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/STATUS_DISPLAY_SYSTEM2.bdf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/assignment_defaults.qdf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/simple_VHDL_CPU.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift8/CPU_VHDL_project_DE1_version2_restored/simulation/modelsim/CPU_VHDL_projekt.vht
+	======= Total: 15 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

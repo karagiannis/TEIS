@@ -1,0 +1,28 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+PACKAGE my_package IS
+TYPE my_vectorType IS STD_LOGIC_VECTOR (11 DOWNTO 0);
+
+FUNCTION my_add (SIGNAL a , b : my_vectorType) RETURN my_vectorType;
+PROCEDURE my_swap (SIGNAL a: inout my_vectorType, SIGNAL b: inout my_vectorType )
+END PACKAGE my_package;
+
+
+PACKAGE BODY my_package IS
+
+	FUNCTION my_add (SIGNAL a , b : SIGNAL a , b : my_vectorType) RETURN my_vectorType IS
+		--VARIABLE sum : my_vectorType;
+	BEGIN   
+		RETURN a + b;
+	END my_add;
+
+	PROCEDURE my_swap (SIGNAL a: inout my_vectorType, SIGNAL b: inout my_vectorType ) IS
+	 VARIABLE temp: my_vectorType;
+	BEGIN
+		temp:= a;
+		a <= b;
+		b <= temp;		
+	END my_swap
+
+END PACKAGE BODY my_package;

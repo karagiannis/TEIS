@@ -1,0 +1,35 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE work.my_package.ALL;
+
+entity uppgift_vhdl_6 is
+
+port ( 
+			a 					: in std_logic_vector(11 downto 0);
+			b 					: in my_vectorType;
+			a_new 			: out my_vectorType;
+			b_new 			: out std_logic_vector(11 downto 0);
+			sum				: out my_vectorType			
+	);
+end entity uppgift_vhdl_6;
+
+architecture test_package of uppgift_vhdl_6 is
+    variable a_copy : my_vectorType;
+	 variable b_copy : my_vectorType;
+	 
+begin
+
+		--procedure test
+		a_copy:= a;
+		b_copy:= b;
+		my_swap(a_copy, b_copy);
+		a_new <= a_copy;
+		b_new <= b_copy;
+		
+		--function test
+		sum <= my_add(a,b);
+		
+
+		
+
+end test_package;

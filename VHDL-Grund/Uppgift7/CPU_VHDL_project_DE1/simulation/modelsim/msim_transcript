@@ -1,0 +1,160 @@
+# Reading C:/altera_lite/16.0/modelsim_ase/tcl/vsim/pref.tcl
+# do CPU_VHDL_project_DE1_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying C:/altera_lite/16.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/STATUS_DISPLAY_SYSTEM.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 23:41:44 on Oct 30,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/STATUS_DISPLAY_SYSTEM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity STATUS_DISPLAY_SYSTEM
+# -- Compiling architecture bdf_type of STATUS_DISPLAY_SYSTEM
+# End time: 23:41:44 on Oct 30,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/CPU_VHDL_projekt.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 23:41:44 on Oct 30,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/CPU_VHDL_projekt.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CPU_VHDL_projekt
+# -- Compiling architecture bdf_type of CPU_VHDL_projekt
+# End time: 23:41:44 on Oct 30,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER_CPU_STATE.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 23:41:44 on Oct 30,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER_CPU_STATE.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SJU_SEG_DISPLAYER_CPU_STATE
+# -- Compiling architecture rtl of SJU_SEG_DISPLAYER_CPU_STATE
+# End time: 23:41:44 on Oct 30,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 23:41:44 on Oct 30,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SJU_SEG_DISPLAYER
+# -- Compiling architecture SJU_SEG_DISPLAYER_arch of SJU_SEG_DISPLAYER
+# End time: 23:41:44 on Oct 30,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simple_VHDL_CPU.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 23:41:44 on Oct 30,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simple_VHDL_CPU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity simple_VHDL_CPU
+# -- Compiling architecture rtl of simple_VHDL_CPU
+# End time: 23:41:44 on Oct 30,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ROM_VHDL.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 23:41:44 on Oct 30,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ROM_VHDL.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ROM_VHDL
+# -- Compiling architecture rtl of ROM_VHDL
+# End time: 23:41:44 on Oct 30,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/OUT_LED.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 23:41:44 on Oct 30,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/OUT_LED.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity OUT_LED
+# -- Compiling architecture rtl of OUT_LED
+# End time: 23:41:44 on Oct 30,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/INPUT_FILTER.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 23:41:44 on Oct 30,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/INPUT_FILTER.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity INPUT_FILTER
+# -- Compiling architecture rtl of INPUT_FILTER
+# End time: 23:41:44 on Oct 30,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ADDR_BUS_DECODER.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 23:41:44 on Oct 30,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ADDR_BUS_DECODER.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ADDR_BUS_DECODER
+# -- Compiling architecture rtl of ADDR_BUS_DECODER
+# End time: 23:41:44 on Oct 30,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simulation/modelsim/CPU_VHDL_projekt.vht}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 23:41:44 on Oct 30,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simulation/modelsim/CPU_VHDL_projekt.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CPU_VHDL_projekt_vhd_tst
+# -- Compiling architecture CPU_VHDL_projekt_arch of CPU_VHDL_projekt_vhd_tst
+# ** Warning: C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simulation/modelsim/CPU_VHDL_projekt.vht(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 23:41:44 on Oct 30,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  CPU_VHDL_projekt_vhd_tst
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" CPU_VHDL_projekt_vhd_tst 
+# Start time: 23:41:44 on Oct 30,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.cpu_vhdl_projekt_vhd_tst(cpu_vhdl_projekt_arch)
+# Loading work.cpu_vhdl_projekt(bdf_type)
+# Loading ieee.numeric_std(body)
+# Loading work.addr_bus_decoder(rtl)
+# Loading work.status_display_system(bdf_type)
+# Loading work.sju_seg_displayer_cpu_state(rtl)
+# Loading work.sju_seg_displayer(sju_seg_displayer_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.input_filter(rtl)
+# Loading work.out_led(rtl)
+# Loading work.rom_vhdl(rtl)
+# Loading work.simple_vhdl_cpu(rtl)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 us
+add wave -position insertpoint  \
+sim:/cpu_vhdl_projekt_vhd_tst/i1/b2v_instansiate_VHDL_CPU/CPU_REG_0
+# End time: 00:50:17 on Oct 31,2016, Elapsed time: 1:08:33
+# Errors: 0, Warnings: 0

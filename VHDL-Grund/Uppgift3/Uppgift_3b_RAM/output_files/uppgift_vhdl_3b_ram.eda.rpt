@@ -1,0 +1,60 @@
+EDA Netlist Writer report for uppgift_vhdl_3b_ram
+Wed Oct 05 17:26:33 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. EDA Netlist Writer Summary
+  3. EDA Netlist Writer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                        ;
++---------------------------+---------------------------------------+
+; EDA Netlist Writer Status ; Successful - Wed Oct 05 17:26:33 2016 ;
+; Revision Name             ; uppgift_vhdl_3b_ram                   ;
+; Top-level Entity Name     ; uppgift_vhdl_3b_ram                   ;
+; Family                    ; Cyclone V                             ;
++---------------------------+---------------------------------------+
+
+
++-----------------------------+
+; EDA Netlist Writer Messages ;
++-----------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Wed Oct 05 17:26:32 2016
+Info: Command: quartus_eda --read_settings_files=on --write_settings_files=off uppgift_vhdl_3b_ram -c uppgift_vhdl_3b_ram --gen_testbench
+Info (201002): Generated VHDL Test Bench File C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_RAM/simulation/modelsim/uppgift_vhdl_3b_ram.vht for simulation
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 773 megabytes
+    Info: Processing ended: Wed Oct 05 17:26:34 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

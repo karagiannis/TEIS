@@ -1,0 +1,7 @@
+
+State Machine - |uppgift_vhdl_4_Door_with_lock|state
+Name state.error state.locked state.closed state.opened 
+state.opened 0 0 0 0 
+state.closed 0 0 1 1 
+state.locked 0 1 0 1 
+state.error 1 0 0 1 

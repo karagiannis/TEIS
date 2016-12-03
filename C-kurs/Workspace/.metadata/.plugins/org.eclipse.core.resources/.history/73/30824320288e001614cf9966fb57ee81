@@ -1,0 +1,38 @@
+
+#include <io.h>
+#include <alt_types.h>
+#include <system.h>
+#include "altera_avalon_pio_regs.h"
+
+
+void delay_function(int time_delay)
+{
+	int i,x;
+	for(i=1; i<time_delay;i++) //Kan kommenteras bort under debuggning
+			x = 0;
+	// x är en variabel som bara finns när funktionen är aktiv, vilken minnesadress
+	//har den? (se &x). Varför den adressen?
+	for(i=1; i<3;i++)
+		x = x+1; // Används under debuggning (Verifiering)
+}
+
+
+int main()
+{
+	alt_32 led_value;
+	// loop for ever
+		 while(1)
+		 {
+		 led_value = 0xFF;
+		 IOWR_ALTERA_AVALON_PIO_DATA(PIO_OUT_LED_BASE, led_value);
+		 // kolla stack pekaren, programpekaren, stega “in i” funktionen
+		 delay_function(2);
+		 // kolla stack pekaren, programpekaren
+		 // varför kan inte x ses mer?
+		 led_value = 0x00;
+		 IOWR_ALTERA_AVALON_PIO_DATA(PIO_OUT_LED_BASE, led_value);
+		 delay_function(2);
+		 }
+  return 0;
+ }
+

@@ -1,0 +1,9 @@
+
+State Machine - |uppgift_vhdl_5_extra|key_input_state
+Name key_input_state.first_button_correct key_input_state.wrong_sequence key_input_state.button4_lock_button_is_pushed key_input_state.final_third_button_correct_in_sequence key_input_state.second_button_correct_in_sequence key_input_state.no_buttons_pushed 
+key_input_state.no_buttons_pushed 0 0 0 0 0 0 
+key_input_state.second_button_correct_in_sequence 0 0 0 0 1 1 
+key_input_state.final_third_button_correct_in_sequence 0 0 0 1 0 1 
+key_input_state.button4_lock_button_is_pushed 0 0 1 0 0 1 
+key_input_state.wrong_sequence 0 1 0 0 0 1 
+key_input_state.first_button_correct 1 0 0 0 0 1 

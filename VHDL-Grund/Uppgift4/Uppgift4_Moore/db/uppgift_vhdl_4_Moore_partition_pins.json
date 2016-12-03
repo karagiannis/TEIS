@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "led0_open",
+					"strict" : false
+				},
+				{
+					"name" : "led1_close",
+					"strict" : false
+				},
+				{
+					"name" : "key0_close",
+					"strict" : false
+				},
+				{
+					"name" : "key1_open",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

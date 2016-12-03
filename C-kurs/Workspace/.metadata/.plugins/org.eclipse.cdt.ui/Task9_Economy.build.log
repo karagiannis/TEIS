@@ -1,0 +1,9 @@
+17:33:30 **** Incremental Build of configuration Nios II for project Task9_Economy ****
+make all 
+Info: Building ../Task9_Economy_bsp/
+C:/altera_lite/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Task9_Economy_bsp/
+[BSP build complete]
+[Task9_Economy build complete]
+
+17:33:31 Build Finished (took 622ms)
+

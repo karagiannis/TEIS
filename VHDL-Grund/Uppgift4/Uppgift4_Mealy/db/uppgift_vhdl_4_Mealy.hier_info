@@ -1,0 +1,14 @@
+|uppgift_vhdl_4_Mealy
+clk => state.CLK
+reset_n => state.ACLR
+key0_close => led0_open.DATAB
+key0_close => state.OUTPUTSELECT
+key0_close => state.OUTPUTSELECT
+key0_close => led1_close.DATAB
+key1_open => led1_close.DATAA
+key1_open => state.OUTPUTSELECT
+key1_open => led0_open.DATAA
+led0_open <= led0_open.DB_MAX_OUTPUT_PORT_TYPE
+led1_close <= led1_close.DB_MAX_OUTPUT_PORT_TYPE
+
+

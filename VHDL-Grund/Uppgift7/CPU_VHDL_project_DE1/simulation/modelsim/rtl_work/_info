@@ -1,0 +1,410 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simulation/modelsim
+Eaddr_bus_decoder
+Z1 w1477768085
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ADDR_BUS_DECODER.vhd
+Z6 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ADDR_BUS_DECODER.vhd
+l0
+L5
+Vaf:^S>M1WSh[HbezDaPV43
+!s100 e>hbPLY>TJ>Z6S?@Vi4G51
+Z7 OV;C;10.4d;61
+31
+Z8 !s110 1477867304
+!i10b 1
+Z9 !s108 1477867304.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ADDR_BUS_DECODER.vhd|
+Z11 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ADDR_BUS_DECODER.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1
+Artl
+R2
+R3
+R4
+DEx4 work 16 addr_bus_decoder 0 22 af:^S>M1WSh[HbezDaPV43
+l18
+L16
+V[JVEe;847:M>MhU9E2P`42
+!s100 ^YZz6m[oL7AJClA03`@=X3
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecpu_vhdl_projekt
+Z14 w1477860597
+R3
+R4
+R0
+Z15 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/CPU_VHDL_projekt.vhd
+Z16 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/CPU_VHDL_projekt.vhd
+l0
+L25
+VDOeQDYIGC[Ha8OV7KRR4b0
+!s100 O4a0EZLBm8z<BVR0FEnTX2
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/CPU_VHDL_projekt.vhd|
+Z18 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/CPU_VHDL_projekt.vhd|
+!i113 1
+R12
+R13
+Abdf_type
+R3
+R4
+DEx4 work 16 cpu_vhdl_projekt 0 22 DOeQDYIGC[Ha8OV7KRR4b0
+l127
+L39
+VN^5@S0MMVKaa1zCGz2KZF3
+!s100 kMj<:2;9Cz;MQ;8Q:;7`I1
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Ecpu_vhdl_projekt_vhd_tst
+Z19 w1477862720
+R3
+R4
+R0
+Z20 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simulation/modelsim/CPU_VHDL_projekt.vht
+Z21 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simulation/modelsim/CPU_VHDL_projekt.vht
+l0
+L31
+VCL<DAAXD:Ca6zMeLS6j;R0
+!s100 b:3IcEVlAZWS3f5NOQoQG0
+R7
+31
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simulation/modelsim/CPU_VHDL_projekt.vht|
+Z23 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simulation/modelsim/CPU_VHDL_projekt.vht|
+!i113 1
+R12
+R13
+Acpu_vhdl_projekt_arch
+R3
+R4
+DEx4 work 24 cpu_vhdl_projekt_vhd_tst 0 22 CL<DAAXD:Ca6zMeLS6j;R0
+l57
+L33
+VGX[_Z[gF=;aPDZzhd5jE73
+!s100 I[Z4n]ldGlKn?<^I3;ckG1
+R7
+31
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R12
+R13
+Einput_filter
+Z24 w1471506709
+Z25 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z26 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R3
+R4
+R0
+Z27 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/INPUT_FILTER.vhd
+Z28 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/INPUT_FILTER.vhd
+l0
+L43
+VDAh[=6;S2lXG<>EBS3=Zc3
+!s100 eBB=We@MHKoIVTW=oI3CJ0
+R7
+31
+R8
+!i10b 1
+R9
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/INPUT_FILTER.vhd|
+Z30 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/INPUT_FILTER.vhd|
+!i113 1
+R12
+R13
+Artl
+R25
+R26
+R3
+R4
+DEx4 work 12 input_filter 0 22 DAh[=6;S2lXG<>EBS3=Zc3
+l61
+L56
+VRVe4nCWLbMP6jIBb8glbd2
+!s100 B_b?^m`gI[gSEiIAdOV;@1
+R7
+31
+R8
+!i10b 1
+R9
+R29
+R30
+!i113 1
+R12
+R13
+Eout_led
+Z31 w1477766239
+R3
+R4
+R0
+Z32 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/OUT_LED.vhd
+Z33 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/OUT_LED.vhd
+l0
+L4
+VfFGkJ_ONDmOQ^=gYMQ<We1
+!s100 BJLbO02?ec@PzgaWMfoTz3
+R7
+31
+R8
+!i10b 1
+R9
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/OUT_LED.vhd|
+Z35 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/OUT_LED.vhd|
+!i113 1
+R12
+R13
+Artl
+R3
+R4
+DEx4 work 7 out_led 0 22 fFGkJ_ONDmOQ^=gYMQ<We1
+l16
+L14
+VnWI8JA5bRIj4LKCOfWkeO0
+!s100 =8BFhIjC^3CfXRiG42>V73
+R7
+31
+R8
+!i10b 1
+R9
+R34
+R35
+!i113 1
+R12
+R13
+Erom_vhdl
+Z36 w1477860028
+R2
+R3
+R4
+R0
+Z37 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ROM_VHDL.vhd
+Z38 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ROM_VHDL.vhd
+l0
+L5
+V`O9V6aPof?bQYi_8^U^ae0
+!s100 cD6_O4N`:?b`fGQdnX7`Q3
+R7
+31
+R8
+!i10b 1
+R9
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ROM_VHDL.vhd|
+Z40 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/ROM_VHDL.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 8 rom_vhdl 0 22 `O9V6aPof?bQYi_8^U^ae0
+l60
+L16
+Vk_aQZONBUd=X0=98X4=VQ2
+!s100 DX?20WZG?IVdiNlDcU1``3
+R7
+31
+R8
+!i10b 1
+R9
+R39
+R40
+!i113 1
+R12
+R13
+Esimple_vhdl_cpu
+Z41 w1477859664
+R2
+R3
+R4
+R0
+Z42 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simple_VHDL_CPU.vhd
+Z43 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simple_VHDL_CPU.vhd
+l0
+L64
+V`hJeBd7RAGZ[JO`>CSLD83
+!s100 >aCR7Z`l:dQQF?=HVIBP:0
+R7
+31
+R8
+!i10b 1
+R9
+Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simple_VHDL_CPU.vhd|
+Z45 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/simple_VHDL_CPU.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 15 simple_vhdl_cpu 0 22 `hJeBd7RAGZ[JO`>CSLD83
+l97
+L78
+V2e^GX=K[L[Eo2==FQm4]:3
+!s100 jCQ6:RNoB`ach1<Wn=DY^3
+R7
+31
+R8
+!i10b 1
+R9
+R44
+R45
+!i113 1
+R12
+R13
+Esju_seg_displayer
+Z46 w1424330295
+R3
+R4
+R0
+Z47 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER.vhd
+Z48 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER.vhd
+l0
+L24
+VA7:;KJAagz5jDnk^H6^bQ2
+!s100 jUN9RRO@]:2jM<VKlY^Gj3
+R7
+31
+R8
+!i10b 1
+R9
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER.vhd|
+Z50 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER.vhd|
+!i113 1
+R12
+R13
+Asju_seg_displayer_arch
+R3
+R4
+DEx4 work 17 sju_seg_displayer 0 22 A7:;KJAagz5jDnk^H6^bQ2
+l61
+L30
+V9IJ@cAeW[AkJI^]U@z_FD1
+!s100 =j?ClY=l;M_XcNZmSiMTl0
+R7
+31
+R8
+!i10b 1
+R9
+R49
+R50
+!i113 1
+R12
+R13
+Esju_seg_displayer_cpu_state
+Z51 w1477778668
+R3
+R4
+R0
+Z52 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER_CPU_STATE.vhd
+Z53 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER_CPU_STATE.vhd
+l0
+L20
+VGi8cSH0gg=2a2?dAEDi_j2
+!s100 Q9RWaMSh_J51ekT:;mL<[1
+R7
+31
+R8
+!i10b 1
+R9
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER_CPU_STATE.vhd|
+Z55 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/SJU_SEG_DISPLAYER_CPU_STATE.vhd|
+!i113 1
+R12
+R13
+Artl
+R3
+R4
+DEx4 work 27 sju_seg_displayer_cpu_state 0 22 Gi8cSH0gg=2a2?dAEDi_j2
+l47
+L26
+VY=]DKPjmSGaNG;6[WQVX]0
+!s100 M^Oijcec=WY2`7bjm@<GU2
+R7
+31
+R8
+!i10b 1
+R9
+R54
+R55
+!i113 1
+R12
+R13
+Estatus_display_system
+Z56 w1477858314
+R3
+R4
+R0
+Z57 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/STATUS_DISPLAY_SYSTEM.vhd
+Z58 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/STATUS_DISPLAY_SYSTEM.vhd
+l0
+L25
+VdfM?cOj1e8?WD5>GTz0hO3
+!s100 2@2bmX^kcSMQD8k><IG4Z3
+R7
+31
+R8
+!i10b 1
+R9
+Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/STATUS_DISPLAY_SYSTEM.vhd|
+Z60 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift7/CPU_VHDL_project_DE1/STATUS_DISPLAY_SYSTEM.vhd|
+!i113 1
+R12
+R13
+Abdf_type
+R3
+R4
+DEx4 work 21 status_display_system 0 22 dfM?cOj1e8?WD5>GTz0hO3
+l55
+L39
+V9a<U=VZzmekk_DmJ86WkK0
+!s100 4nRcfFYX=mC?WjOa0fRSJ0
+R7
+31
+R8
+!i10b 1
+R9
+R59
+R60
+!i113 1
+R12
+R13

@@ -1,0 +1,63 @@
+/*
+ * "Hello World" example.
+ *
+ * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+ * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+ * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+ * device in your system's hardware.
+ * The memory footprint of this hosted application is ~69 kbytes by default
+ * using the standard reference design.
+ *
+ * For a reduced footprint version of this template, and an explanation of how
+ * to reduce the memory footprint for a given application, see the
+ * "small_hello_world" template.
+ *
+ */
+#include <io.h>
+#include <system.h>
+#include <stdio.h>
+#include "altera_avalon_pio_regs.h"
+#include <alt_types.h>
+#include <HAL/inc/sys/alt_irq.h>
+
+static void handle_button_interrupt(void* context);
+static int count_button;
+
+int main()
+{
+	int i,*ptr;
+	printf("We start!\n");
+	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_IN_BUTTONS_BASE,0x01);
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_IN_BUTTONS_BASE,0x01);
+
+	if(alt_ic_isr_register(PIO_IN_BUTTONS_IRQ_INTERRUPT_CONTROLLER_ID,
+			PIO_IN_BUTTONS_IRQ,
+			handle_button_interrupt,ptr,0x0))
+		printf("Error registering IRQ");
+
+	IOWR_8DIRECT(PIO_OUT_LEDS_BASE,0,255);
+	while(1)
+	{
+		printf("Counts = %d\n",count_button);
+		IOWR_8DIRECT(PIO_OUT_LEDS_BASE,0,255-count_button);
+		for(i = 0; i < 10000000; i++);
+	}
+
+  return 0;
+}
+
+static void handle_button_interrupt(void* context){
+	alt_irq_disable_all();
+	if(IORD_8DIRECT(PIO_IN_BUTTONS_BASE,0) & 0x01)
+	printf("IRQ!\n");
+	count_button++;
+	if(count_button == 16)
+		count_button = 0;
+	while((IORD_8DIRECT(PIO_IN_BUTTONS_BASE,0) & 0x01) == 0);
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_IN_BUTTONS_BASE,0x01);
+	IORD_ALTERA_AVALON_PIO_EDGE_CAP(PIO_IN_BUTTONS_BASE);
+	alt_irq_enable_all(context);
+
+
+}
+

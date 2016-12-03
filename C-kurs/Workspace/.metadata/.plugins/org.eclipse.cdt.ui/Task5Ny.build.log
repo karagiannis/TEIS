@@ -1,0 +1,9 @@
+19:53:04 **** Incremental Build of configuration Nios II for project Task5Ny ****
+make all 
+Info: Building ../Task5Ny_bsp/
+C:/altera_lite/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Task5Ny_bsp/
+[BSP build complete]
+[Task5Ny build complete]
+
+19:53:05 Build Finished (took 574ms)
+

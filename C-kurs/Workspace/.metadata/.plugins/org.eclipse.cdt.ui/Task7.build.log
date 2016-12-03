@@ -1,0 +1,9 @@
+20:42:40 **** Incremental Build of configuration Nios II for project Task7 ****
+make all 
+Info: Building ../Task7_bsp/
+C:/altera_lite/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Task7_bsp/
+[BSP build complete]
+[Task7 build complete]
+
+20:42:40 Build Finished (took 856ms)
+

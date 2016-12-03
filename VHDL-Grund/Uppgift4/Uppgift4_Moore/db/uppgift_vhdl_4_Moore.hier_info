@@ -1,0 +1,10 @@
+|uppgift_vhdl_4_Moore
+clk => state.CLK
+reset_n => state.ACLR
+key0_close => state.OUTPUTSELECT
+key0_close => state.OUTPUTSELECT
+key1_open => state.OUTPUTSELECT
+led0_open << state.DB_MAX_OUTPUT_PORT_TYPE
+led1_close << state.DB_MAX_OUTPUT_PORT_TYPE
+
+

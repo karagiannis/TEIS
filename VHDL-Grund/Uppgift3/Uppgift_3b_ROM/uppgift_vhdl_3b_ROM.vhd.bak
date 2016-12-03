@@ -1,0 +1,29 @@
+use ieee.numeric_std.all;
+
+entity uppgift_vhdl_3b_ROM is
+port
+	(
+		clk 	: in std_logic; -- Active on positive edge from key
+		addr_in 	: in std_logic_vector(1 downto 0); -- addr in slide switches
+		q_out 		: out std_logic_vector(1 downto 0) -- data out to leds
+	);
+end entity;
+
+
+ARCHITECTURE logic OF uppgift_vhdl_3b_ROM is
+
+	TYPE mem_type IS ARRAY (0 TO 7) OF std_logic_vector (1 DOWNTO 0);
+	SIGNAL mem: mem_type;
+	
+BEGIN
+
+PROCESS (clk) BEGIN
+
+	if rising_edge(clk) then
+
+   q_out <= mem(conv_integer(addr_in));
+	
+	end if;
+END PROCESS;
+END ARCHITECTURE logic;
+

@@ -1,0 +1,33 @@
+Quartus Prime Archive log --	C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/isspe_text.qarlog
+
+Archive:	C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/isspe_text.qar
+Date:		Sun Nov 13 06:30:50 2016
+Quartus Prime		16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/ADDR_BUS_DECODER.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/CPU_VHDL_projekt.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/INPUT_FILTER.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/OUT_LED.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/ROM_VHDL.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/SJU_SEG_DISPLAYER.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/SJU_SEG_DISPLAYER_CPU_STATE.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/STATUS_DISPLAY_SYSTEM.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/isspe_text.cdf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/isspe_text.qpf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/isspe_text.qsf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/isspe_text.spf
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/isspe_text.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/simple_VHDL_CPU.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/sources_probes.qsys
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/sources_probes.sopcinfo
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/sources_probes/sources_probes.cmp
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/sources_probes/synthesis/sources_probes.debuginfo
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/sources_probes/synthesis/sources_probes.qip
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/sources_probes/synthesis/sources_probes.vhd
+C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/sources_probes/synthesis/submodules/altsource_probe_top.v
+c:/altera_lite/16.0/quartus/bin64/assignment_defaults.qdf
+	======= Total: 22 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

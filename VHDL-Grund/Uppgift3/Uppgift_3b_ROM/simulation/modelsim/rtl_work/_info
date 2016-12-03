@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/simulation/modelsim
+Euppgift_vhdl_3b_rom
+Z1 w1475693885
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z7 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/uppgift_vhdl_3b_ROM.vhd
+Z8 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/uppgift_vhdl_3b_ROM.vhd
+l0
+L33
+VzCA8C`UdPXPUg_7i1Y?Yn1
+!s100 @444hH4zGC[MN8<R?dOYm2
+Z9 OV;C;10.4d;61
+31
+Z10 !s110 1475694617
+!i10b 1
+Z11 !s108 1475694617.000000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/uppgift_vhdl_3b_ROM.vhd|
+Z13 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/uppgift_vhdl_3b_ROM.vhd|
+!i113 1
+Z14 o-93 -work work
+Z15 tExplicit 1
+Alogic
+R2
+R3
+R4
+R5
+R6
+DEx4 work 19 uppgift_vhdl_3b_rom 0 22 zCA8C`UdPXPUg_7i1Y?Yn1
+l48
+L43
+V3<95Fj7^SBN=l=A8B:@G51
+!s100 @8En7FioA?1@gD]4Lc;8Z2
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Euppgift_vhdl_3b_rom_vhd_tst
+Z16 w1475694598
+R5
+R6
+R0
+Z17 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/simulation/modelsim/uppgift_vhdl_3b_ROM.vht
+Z18 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/simulation/modelsim/uppgift_vhdl_3b_ROM.vht
+l0
+L31
+V>O`1Iba?:YNiU10R753zB2
+!s100 :minGbNHHSTjKLSd5V>Yz3
+R9
+31
+R10
+!i10b 1
+R11
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/simulation/modelsim/uppgift_vhdl_3b_ROM.vht|
+Z20 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift_3b_ROM/simulation/modelsim/uppgift_vhdl_3b_ROM.vht|
+!i113 1
+R14
+R15
+Auppgift_vhdl_3b_rom_arch
+R5
+R6
+DEx4 work 27 uppgift_vhdl_3b_rom_vhd_tst 0 22 >O`1Iba?:YNiU10R753zB2
+l46
+L33
+VNW:KUZMMoAja`B=I:g=dE2
+!s100 DgbSBXRD0V7kOidh7<iJn0
+R9
+31
+R10
+!i10b 1
+R11
+R19
+R20
+!i113 1
+R14
+R15

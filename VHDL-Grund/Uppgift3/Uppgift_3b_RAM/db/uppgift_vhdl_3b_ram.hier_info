@@ -1,0 +1,29 @@
+|uppgift_vhdl_3b_ram
+clk => mem~5.CLK
+clk => mem~0.CLK
+clk => mem~1.CLK
+clk => mem~2.CLK
+clk => mem~3.CLK
+clk => mem~4.CLK
+clk => q_out[0]~reg0.CLK
+clk => q_out[1]~reg0.CLK
+clk => mem.CLK0
+addr_in[0] => mem~2.DATAIN
+addr_in[0] => mem.WADDR
+addr_in[0] => mem.RADDR
+addr_in[1] => mem~1.DATAIN
+addr_in[1] => mem.WADDR1
+addr_in[1] => mem.RADDR1
+addr_in[2] => mem~0.DATAIN
+addr_in[2] => mem.WADDR2
+addr_in[2] => mem.RADDR2
+data_in[0] => mem~4.DATAIN
+data_in[0] => mem.DATAIN
+data_in[1] => mem~3.DATAIN
+data_in[1] => mem.DATAIN1
+wren => mem~5.DATAIN
+wren => mem.WE
+q_out[0] << q_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_out[1] << q_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift5/Uppgift5_extra/simulation/modelsim
+Euppgift_vhdl_5_extra
+Z1 w1476547969
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift5/Uppgift5_extra/uppgift_vhdl_5_extra.vhd
+Z7 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift5/Uppgift5_extra/uppgift_vhdl_5_extra.vhd
+l0
+L37
+VWdZ^=zQCjM>DS:Si9U:9k1
+!s100 Sej?Lndo:8eD>RU_PYQ651
+Z8 OV;C;10.4d;61
+31
+Z9 !s110 1476549307
+!i10b 1
+Z10 !s108 1476549307.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift5/Uppgift5_extra/uppgift_vhdl_5_extra.vhd|
+Z12 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift5/Uppgift5_extra/uppgift_vhdl_5_extra.vhd|
+!i113 1
+Z13 o-93 -work work
+Z14 tExplicit 1
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 20 uppgift_vhdl_5_extra 0 22 WdZ^=zQCjM>DS:Si9U:9k1
+l85
+L53
+VFM^gKzk1@2E`FBMdnd_U43
+!s100 o5nYCP^NNmmk5n]PMYZmE3
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Euppgift_vhdl_5_extra_vhd_tst
+Z15 w1476549147
+R4
+R5
+R0
+Z16 8C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift5/Uppgift5_extra/simulation/modelsim/uppgift_vhdl_5_extra.vht
+Z17 FC:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift5/Uppgift5_extra/simulation/modelsim/uppgift_vhdl_5_extra.vht
+l0
+L31
+Vm<?OVN@GSXII;_O?KI[2T0
+!s100 GUONFAJSHA?ic42eJXc6=2
+R8
+31
+R9
+!i10b 1
+R10
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift5/Uppgift5_extra/simulation/modelsim/uppgift_vhdl_5_extra.vht|
+Z19 !s107 C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift5/Uppgift5_extra/simulation/modelsim/uppgift_vhdl_5_extra.vht|
+!i113 1
+R13
+R14
+Auppgift_vhdl_5_extra_arch
+R4
+R5
+DEx4 work 28 uppgift_vhdl_5_extra_vhd_tst 0 22 m<?OVN@GSXII;_O?KI[2T0
+l58
+L33
+V:WER3Le^jEYYYiPWB2I@?0
+!s100 ceF?cZX2jSLfzP=d8@6391
+R8
+31
+R9
+!i10b 1
+R10
+R18
+R19
+!i113 1
+R13
+R14

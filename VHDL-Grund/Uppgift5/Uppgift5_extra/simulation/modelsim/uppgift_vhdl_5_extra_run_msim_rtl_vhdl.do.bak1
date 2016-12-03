@@ -1,0 +1,27 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift5/Uppgift5_extra/uppgift_vhdl_5_extra.vhd}
+
+vcom -93 -work work {C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift5/Uppgift5_extra/simulation/modelsim/uppgift_vhdl_5_extra.vht}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  uppgift_vhdl_5_extra_vhd_tst
+
+add wave *
+add wave -position insertpoint  \
+sim:/uppgift_vhdl_5_extra_vhd_tst/i1/reset_n_delay2
+add wave -position insertpoint  \
+sim:/uppgift_vhdl_5_extra_vhd_tst/i1/key0_delay2
+add wave -position insertpoint  \
+sim:/uppgift_vhdl_5_extra_vhd_tst/i1/key1_delay2
+add wave -position insertpoint  \
+sim:/uppgift_vhdl_5_extra_vhd_tst/i1/key2_delay2
+add wave -position insertpoint  \
+sim:/uppgift_vhdl_5_extra_vhd_tst/i1/key3_lock_command_delay2
+view structure
+view signals
+run 1 ms

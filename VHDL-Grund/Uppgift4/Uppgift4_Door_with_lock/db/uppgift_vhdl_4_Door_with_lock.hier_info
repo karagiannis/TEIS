@@ -1,0 +1,37 @@
+|uppgift_vhdl_4_Door_with_lock
+clk => led9_error~reg0.CLK
+clk => led2_door_locked~reg0.CLK
+clk => led1_door_closed~reg0.CLK
+clk => led0_door_opened~reg0.CLK
+clk => state~1.DATAIN
+reset_n => led0_door_opened~reg0.PRESET
+reset_n => state~3.DATAIN
+reset_n => led9_error~reg0.ENA
+reset_n => led1_door_closed~reg0.ENA
+reset_n => led2_door_locked~reg0.ENA
+key0_close => Selector2.IN5
+key0_close => state.OUTPUTSELECT
+key0_close => led9_error.OUTPUTSELECT
+key0_close => Selector3.IN1
+key0_close => process_0.IN0
+key1_open => led1_door_closed.DATAA
+key1_open => led0_door_opened.DATAA
+key1_open => state.OUTPUTSELECT
+key1_open => led9_error.OUTPUTSELECT
+key1_open => process_0.IN1
+key2_lock => led0_door_opened.OUTPUTSELECT
+key2_lock => led1_door_closed.OUTPUTSELECT
+key2_lock => Selector1.IN1
+key2_lock => Selector4.IN1
+key2_lock => process_0.IN0
+key3_unlock => Selector4.IN5
+key3_unlock => state.OUTPUTSELECT
+key3_unlock => led9_error.OUTPUTSELECT
+key3_unlock => Selector3.IN3
+key3_unlock => process_0.IN1
+led0_door_opened <= led0_door_opened~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led1_door_closed <= led1_door_closed~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led2_door_locked <= led2_door_locked~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led9_error <= led9_error~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

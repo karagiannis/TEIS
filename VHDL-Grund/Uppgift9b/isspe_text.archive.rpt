@@ -1,0 +1,97 @@
+Archive Project report for isspe_text
+Sun Nov 13 06:30:50 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Sun Nov 13 06:30:50 2016 ;
+; Revision Name          ; isspe_text                            ;
+; Top-level Entity Name  ; isspe_text                            ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/root/Documents/TEIS2016/VHDL-Grund/Uppgift9b/isspe_text.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'isspe_text.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/altera_lite/16.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 812 megabytes
+    Info: Processing ended: Sun Nov 13 06:30:50 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++-----------------------------------------------------------+
+; Files Archived                                            ;
++-----------------------------------------------------------+
+; File Name                                                 ;
++-----------------------------------------------------------+
+; ADDR_BUS_DECODER.vhd                                      ;
+; c:/altera_lite/16.0/quartus/bin64/assignment_defaults.qdf ;
+; CPU_VHDL_projekt.vhd                                      ;
+; INPUT_FILTER.vhd                                          ;
+; isspe_text.cdf                                            ;
+; isspe_text.qpf                                            ;
+; isspe_text.qsf                                            ;
+; isspe_text.spf                                            ;
+; isspe_text.vhd                                            ;
+; OUT_LED.vhd                                               ;
+; ROM_VHDL.vhd                                              ;
+; simple_VHDL_CPU.vhd                                       ;
+; SJU_SEG_DISPLAYER.vhd                                     ;
+; SJU_SEG_DISPLAYER_CPU_STATE.vhd                           ;
+; sources_probes/synthesis/../../sources_probes.qsys        ;
+; sources_probes/synthesis/../../sources_probes.sopcinfo    ;
+; sources_probes/synthesis/../sources_probes.cmp            ;
+; sources_probes/synthesis/sources_probes.debuginfo         ;
+; sources_probes/synthesis/sources_probes.qip               ;
+; sources_probes/synthesis/sources_probes.vhd               ;
+; sources_probes/synthesis/submodules/altsource_probe_top.v ;
+; STATUS_DISPLAY_SYSTEM.vhd                                 ;
++-----------------------------------------------------------+
+
+
