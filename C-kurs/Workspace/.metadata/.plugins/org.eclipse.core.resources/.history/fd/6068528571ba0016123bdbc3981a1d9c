@@ -136,8 +136,8 @@ int main()
 	QUEUE q1,q2,q3,q4,q5;
 	QUEUE* q11 = &q1;
 	SENSOR_OBJECT accelorometerX =
-		{	"Accelerom. x",
-			30, 50,1,1,40,4, q1,q11,
+		{	"Accelerometer x",
+			50, 50,1,1,20,4, q1,q11,
 			config_time_base,
 			init_measurement,
 			read_accelerometerX,
@@ -310,13 +310,11 @@ void config_time_base(alt_u32 time_base, SENSOR_OBJECT* sensor_obj){
 }
 void init_measurement(SENSOR_OBJECT* sensor_obj){
 	queue_init(sensor_obj->q);
-	print_char(sensor_obj->x_origo +55,sensor_obj->y_origo -3,7,0,'>');
 	print_hline(sensor_obj->x_origo,sensor_obj->y_origo,60,7);
-
-	print_char(sensor_obj->x_origo -4,sensor_obj->y_origo -45,7,0,'^');
+	print_char(sensor_obj->x_origo +55,sensor_obj->y_origo -2,7,0,'>');
 	print_vline(sensor_obj->x_origo-1,sensor_obj->y_origo -45,45,7);
-
-	print_str(sensor_obj->x_origo -20, sensor_obj->y_origo +10,7,sensor_obj->description);
+	print_char(sensor_obj->x_origo -5,sensor_obj->y_origo -40,7,0,'^');
+	print_str(sensor_obj->x_origo +10, sensor_obj->y_origo +10,7,sensor_obj->description);
 }
 void update_graph(SENSOR_OBJECT* sensor_obj){
 	queue_print(sensor_obj->q);

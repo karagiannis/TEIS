@@ -136,8 +136,8 @@ int main()
 	QUEUE q1,q2,q3,q4,q5;
 	QUEUE* q11 = &q1;
 	SENSOR_OBJECT accelorometerX =
-		{	"Accelerom. x",
-			30, 50,1,1,40,4, q1,q11,
+		{	"Accelerometer x",
+			50, 50,1,1,20,4, q1,q11,
 			config_time_base,
 			init_measurement,
 			read_accelerometerX,
