@@ -312,8 +312,8 @@ void init_measurement(SENSOR_OBJECT* sensor_obj){
 	queue_init(sensor_obj->q);
 	print_hline(sensor_obj->x_origo,sensor_obj->y_origo,60,7);
 	print_char(sensor_obj->x_origo +61,sensor_obj->y_origo,7,0,'>');
-	print_vline(sensor_obj->x_origo-1,sensor_obj->y_origo -40,40,7);
-	print_char(sensor_obj->x_origo,sensor_obj->y_origo -41,7,0,'^');
+	print_vline(sensor_obj->x_origo,sensor_obj->y_origo,-60,7);
+	print_char(sensor_obj->x_origo,sensor_obj->y_origo -61,7,0,'^');
 	print_str(sensor_obj->x_origo +10, sensor_obj->y_origo +10,7,sensor_obj->description);
 }
 void update_graph(SENSOR_OBJECT* sensor_obj){
@@ -642,9 +642,8 @@ void queue_print_screen(QUEUE *q, int x_origo, int y_origo, int normalization, i
 	        printf("Un-normalized %d\n normalized %d\n", q->items[i],q->items[i]/normalization );
 	        j = q->numitems-1 -i;
 	        printf("j%d\n",j);
-	        for(int k = 1; k < 35;k++)
+	        for(int k = 0; k < 50;k++)
 	        	print_pix(x_origo + j, y_origo-k,0);//Blank out previous measurement
-	        print_pix(x_origo + j, y_origo,7);//Fix ccordinate system line
 	        value = (y_origo-offset - q->items[i]/normalization < y_origo )? y_origo-offset - q->items[i]/normalization : y_origo;//Trunk
 	        print_pix(x_origo + j, value,rgb);
 	    }

@@ -642,7 +642,7 @@ void queue_print_screen(QUEUE *q, int x_origo, int y_origo, int normalization, i
 	        printf("Un-normalized %d\n normalized %d\n", q->items[i],q->items[i]/normalization );
 	        j = q->numitems-1 -i;
 	        printf("j%d\n",j);
-	        for(int k = 1; k < 35;k++)
+	        for(int k = 1; k < 50;k++)
 	        	print_pix(x_origo + j, y_origo-k,0);//Blank out previous measurement
 	        print_pix(x_origo + j, y_origo,7);//Fix ccordinate system line
 	        value = (y_origo-offset - q->items[i]/normalization < y_origo )? y_origo-offset - q->items[i]/normalization : y_origo;//Trunk

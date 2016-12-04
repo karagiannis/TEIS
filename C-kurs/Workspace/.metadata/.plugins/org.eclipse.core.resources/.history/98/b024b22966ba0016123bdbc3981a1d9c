@@ -75,7 +75,7 @@ void print_menu();
 
 /************************************************/
 
-#define QUEUESIZE 50
+#define QUEUESIZE 5
 
 typedef struct
 {
@@ -118,7 +118,7 @@ struct SENSOR_CLASS {
 };
 
 void config_time_base(alt_u32, SENSOR_OBJECT*);
-void init_measurement(SENSOR_OBJECT*);
+void init_measurement(QUEUE *q);
 void read_accelerometerX(QUEUE *q);
 void update_graph(SENSOR_OBJECT*);
 void read_accelerometerY(QUEUE *q);
@@ -153,7 +153,7 @@ int main()
 		print_char(100,100,5,0,'A');
 		print_char(200,100,5,0,'a');
 		print_str(150,150,5,"Lasse Karagiannis");
-		accelorometerX.reset_samples_vector(&accelorometerX);
+		accelorometerX.reset_samples_vector(accelorometerX.q);
 
 	while(1){
 
@@ -308,13 +308,8 @@ int main()
 void config_time_base(alt_u32 time_base, SENSOR_OBJECT* sensor_obj){
 	 sensor_obj->time_base = time_base;
 }
-void init_measurement(SENSOR_OBJECT* sensor_obj){
-	queue_init(sensor_obj->q);
-	print_hline(sensor_obj->x_origo,sensor_obj->y_origo,60,7);
-	print_char(sensor_obj->x_origo +61,sensor_obj->y_origo,7,0,'>');
-	print_vline(sensor_obj->x_origo-1,sensor_obj->y_origo -40,40,7);
-	print_char(sensor_obj->x_origo,sensor_obj->y_origo -41,7,0,'^');
-	print_str(sensor_obj->x_origo +10, sensor_obj->y_origo +10,7,sensor_obj->description);
+void init_measurement(QUEUE *q){
+	queue_init(q);
 }
 void update_graph(SENSOR_OBJECT* sensor_obj){
 	queue_print(sensor_obj->q);
@@ -637,16 +632,11 @@ void queue_print(QUEUE *q)
 void queue_print_screen(QUEUE *q, int x_origo, int y_origo, int normalization, int offset, int rgb){
 	 int i = 0;
 	 int j;
-	 int value;
 	    for (i = q->numitems-1; i>= 0; i--){  //print in FIFO order, oldest first
 	        printf("Un-normalized %d\n normalized %d\n", q->items[i],q->items[i]/normalization );
 	        j = q->numitems-1 -i;
 	        printf("j%d\n",j);
-	        for(int k = 1; k < 35;k++)
-	        	print_pix(x_origo + j, y_origo-k,0);//Blank out previous measurement
-	        print_pix(x_origo + j, y_origo,7);//Fix ccordinate system line
-	        value = (y_origo-offset - q->items[i]/normalization < y_origo )? y_origo-offset - q->items[i]/normalization : y_origo;//Trunk
-	        print_pix(x_origo + j, value,rgb);
+	        print_pix(x_origo + j, y_origo-offset - q->items[i]/normalization,rgb);
 	    }
 }
 
