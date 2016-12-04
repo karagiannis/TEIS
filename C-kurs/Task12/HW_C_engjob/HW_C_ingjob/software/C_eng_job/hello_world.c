@@ -25,7 +25,9 @@
 #include <altera_avalon_spi_regs.h>
 
 #include <altera_avalon_timer_regs.h>
-#include "font8x8_basic.h"
+//#include "font8x8_basic.h"
+//#include "queue.h"
+#include "print_util.h"
 #include <string.h>
 
 #define WRITE_COMMAND 0x0A 	// Used for acc SPI
@@ -50,18 +52,127 @@ ACCELEROMETER accel_data;
 alt_u8 spi_command_tx[2] = {0x0B, 0x00}; //, 0x00, 0x00}; // read one register from address 0x00
 alt_u8 spi_command_rx[4] = {0xB,0,0,0};
 
-void print_pix(unsigned int x,unsigned int y,unsigned int rgb);
-void print_hline(unsigned int x_start,unsigned int y_start, unsigned int len,unsigned int RGB);
-void print_vline(unsigned int x_start, unsigned int y_start, unsigned int len, unsigned int RGB);
-void  print_char(unsigned int x,unsigned int y,unsigned int rgb,unsigned int BG_RGB,char Character);
-void print_str(alt_u16 x_start, alt_u16 y_start,alt_u8 rgb,char *str);
-void print_circle(unsigned int radie, unsigned int x_centrum, unsigned int y_centrum, unsigned int rgb);
-void print_empty_circle(unsigned int radie, unsigned int x_centrum, unsigned int y_centrum, unsigned int rgb);
-void print_symmetry_dots_circle(unsigned int x, unsigned int y, unsigned int x_centrum, unsigned int y_centrum, unsigned int rgb);
+/********************************************************/
+#include "font8x8_basic.h"
+typedef alt_u8 pixel_data;
 
+void print_pix(alt_u32 x,alt_u32 y,alt_u32 rgb);
+void print_hline(alt_u32 x_start,alt_u32 y_start, alt_u32 len,alt_u32 RGB);
+void print_vline(alt_u32 x_start,alt_u32 y_start, alt_u32 len, alt_u32 RGB);
+void  print_char(alt_u32 x,alt_u32 y,alt_u32 rgb,alt_u32 BG_RGB,char Character);
+void print_str(alt_u32 x_start, alt_u32 y_start,alt_u32 rgb,char *str);
+void print_circle(alt_u32 radie, alt_u32 x_centrum, alt_u32 y_centrum, alt_u32 rgb);
+void print_empty_circle(alt_u32 radie, alt_u32 x_centrum, alt_u32 y_centrum, alt_u32 rgb);
+void print_symmetry_dots_circle(alt_u32 x, alt_u32 y, alt_u32 x_centrum, alt_u32 y_centrum, alt_u32 rgb);
+void clear_screen(alt_u32 rgb);
+pixel_data read_pixel_ram_int(alt_u32 x_start, alt_u32 y_start);
+void print_line(alt_u32 x_start,alt_u32 y_start,alt_u32 x_slut,alt_u32 y_slut);
+void print_hArrow(alt_u32 x_start,alt_u32 y_start);
+void print_vArrow(alt_u32 x_start,alt_u32 y_start);
+void print_coordinate_system(alt_u32 x_origin,alt_u32 y_origin);
+void print_welcome_screen();
+void print_menu();
+
+/************************************************/
+
+#define QUEUESIZE 100
+
+typedef struct
+{
+    int items[QUEUESIZE];
+    int rindex;
+    int windex;
+    int numitems;
+} QUEUE;
+
+void queue_init(QUEUE *q);
+int queue_enqueue(QUEUE *q,int item);
+int queue_dequeue(QUEUE *q,int *item);
+void queue_print(QUEUE *q);
+void queue_print_screen(QUEUE *q, int x_origo, int y_origo, int normalization, int offset, int rgb);
+
+
+/***************************************************/
+
+
+
+typedef struct SENSOR_CLASS SENSOR_OBJECT;
+enum sampling_state  {fast_sampling, slow_sampling};
+
+
+struct SENSOR_CLASS {
+    char description[80];
+    alt_u32 x_origo;
+    alt_u32 y_origo;
+    alt_u32 time_base;
+    alt_u32 normalization_factor;
+    alt_u32 offset;
+    alt_u32 rgb;
+    QUEUE queue;
+    QUEUE *q;
+    void (*configure_time_base)(alt_u32, void*);
+    void (*reset_samples_vector)(QUEUE*);
+    void (*read_sensor)(QUEUE*);
+    void (*update_graph)(void*);
+    void *this;
+};
+
+void config_time_base(alt_u32, SENSOR_OBJECT*);
+void init_measurement(QUEUE *q);
+void read_accelerometerX(QUEUE *q);
+void update_graph(SENSOR_OBJECT*);
+void read_accelerometerY(QUEUE *q);
+void read_accelerometerZ(QUEUE *q);
+
+/*struct SENSOR_OBJECT sensorArray[5] =
+{
+
+
+};*/
 
 int main()
 {
+	enum sampling_state state = fast_sampling;
+	QUEUE q1,q2,q3,q4,q5;
+	QUEUE* q11 = &q1;
+	SENSOR_OBJECT accelorometerX =
+		{	"Accelerometer x",
+			50, 50,1,1,20,4, q1,q11,
+			config_time_base,
+			init_measurement,
+			read_accelerometerX,
+			update_graph,
+			&accelorometerX
+		};
+	printf("Test for all components initiate!\n\n");
+		for(i = 0; i < 78600; i++)
+			set_address_pixel(i, 0);
+
+		print_hline(0,120,320,6);
+		print_vline(160,0,240,2);
+		print_char(100,100,5,0,'A');
+		print_char(200,100,5,0,'a');
+		print_str(150,150,5,"Lasse Karagiannis");
+		accelorometerX.reset_samples_vector(accelorometerX.q);
+
+	while(1){
+
+	/*	if(IORD_32DIRECT(KEY_INPUT_BASE,0) & 1<<1)
+			state = fast_sampling;
+		if(IORD_32DIRECT(KEY_INPUT_BASE,0) & 1<<2)
+			state = slow_sampling;*/
+
+		switch(state){
+		case fast_sampling:
+			TIMER_RESET;
+			TIMER_START;
+			while(TIMER_READ < 50000000);
+			accelorometerX.configure_time_base(1,&accelorometerX);
+			accelorometerX.read_sensor(accelorometerX.q);
+			accelorometerX.update_graph(&accelorometerX);
+		}
+	}
+
 
 	printf("Test for all components initiate!\n\n");
 	for(i = 0; i < 78600; i++)
@@ -161,22 +272,158 @@ int main()
 	{
 		printf("Press button %d!\n", i+1);
 		while(IORD_32DIRECT(KEY_INPUT_BASE,0) & 1<<i);
+		clear_screen(i+2);
+		int k = read_pixel_ram_int(59,59);
+		printf("Pixeldata ram is %d\n",k);
+
 	}
 	printf("---- KEY test complete ----\n\n");
 
 	printf("All tests complete!\n");
 	print_circle(20, 200,200,5);
 
+	//Welcome Screen
+	printf("Press button %d!\n", 1);
+	while(IORD_32DIRECT(KEY_INPUT_BASE,0) & 1<<0);
+
+	//Measurement screen
+	int mode = 0; //fast sampling
+	while(1){
+		//Läs tangent
+		alt_u8 key = IORD_32DIRECT(KEY_INPUT_BASE,0);
+		//om mode ändrad rita om skärmen och dumpa mätresultat
+
+		//Rita koordinat-systemen med rätt tidsupplösning
+
+		//STARTA Timern
+
+		//Sampla sensorer
+
+		//Lagra sensordata
+	}
+
 	return 0;
 }
-void print_pix(unsigned int x,unsigned int y,unsigned int rgb)
+/************************************************/
+void config_time_base(alt_u32 time_base, SENSOR_OBJECT* sensor_obj){
+	 sensor_obj->time_base = time_base;
+}
+void init_measurement(QUEUE *q){
+	queue_init(q);
+}
+void update_graph(SENSOR_OBJECT* sensor_obj){
+	queue_print_screen(sensor_obj->q,
+			sensor_obj->x_origo,
+			sensor_obj->y_origo,
+			sensor_obj->normalization_factor,
+			sensor_obj->offset,
+			sensor_obj->rgb);
+}
+void read_accelerometerX(QUEUE *q)
+{
+	ACCELEROMETER accel_data;
+	alt_u8 spi_command_tx[2] = {0x0B, 0x00}; //, 0x00, 0x00}; // read one register from address 0x00
+	alt_u8 spi_command_rx[4] = {0xB,0,0,0};
+	// ------------------------------------------ Init SPI
+		spi_command_tx[0] = WRITE_COMMAND; // write command
+		spi_command_tx[1] = 0x2D; // Address 0x2D (go bit location)
+		spi_command_tx[2] = 0x02; // go bit value
+
+		alt_avalon_spi_command( ACCELEROMETER_SPI_BASE, 0,
+							  3, spi_command_tx,
+							  0, spi_command_rx,
+							  0);
+	// ------------------------------------------ Read SPI
+		spi_command_tx[0] = READ_COMMAND; // read command
+		spi_command_tx[1] = 0x08; // Address of the data registers
+
+
+			alt_avalon_spi_command( ACCELEROMETER_SPI_BASE, 0,
+								  2, spi_command_tx,
+								  3, &accel_data,
+								  0);
+
+			printf("X:%d\t Y:%d\t Z:%d\t\n",accel_data.x, accel_data.y, accel_data.z);
+
+
+		alt_32 accel_x = 0;
+		accel_x = (alt_32)accel_data.x;
+		queue_enqueue(q,accel_x);
+}
+
+void read_accelerometerY(QUEUE *q)
+{
+	ACCELEROMETER accel_data;
+	alt_u8 spi_command_tx[2] = {0x0B, 0x00}; //, 0x00, 0x00}; // read one register from address 0x00
+	alt_u8 spi_command_rx[4] = {0xB,0,0,0};
+	// ------------------------------------------ Init SPI
+		spi_command_tx[0] = WRITE_COMMAND; // write command
+		spi_command_tx[1] = 0x2D; // Address 0x2D (go bit location)
+		spi_command_tx[2] = 0x02; // go bit value
+
+		alt_avalon_spi_command( ACCELEROMETER_SPI_BASE, 0,
+							  3, spi_command_tx,
+							  0, spi_command_rx,
+							  0);
+	// ------------------------------------------ Read SPI
+		spi_command_tx[0] = READ_COMMAND; // read command
+		spi_command_tx[1] = 0x08; // Address of the data registers
+
+
+			alt_avalon_spi_command( ACCELEROMETER_SPI_BASE, 0,
+								  2, spi_command_tx,
+								  3, &accel_data,
+								  0);
+
+			printf("X:%d\t Y:%d\t Z:%d\t\n",accel_data.x, accel_data.y, accel_data.z);
+
+
+		queue_enqueue(q,accel_data.x);
+}
+
+void read_accelerometerZ(QUEUE *q)
+{
+	ACCELEROMETER accel_data;
+	alt_u8 spi_command_tx[2] = {0x0B, 0x00}; //, 0x00, 0x00}; // read one register from address 0x00
+	alt_u8 spi_command_rx[4] = {0xB,0,0,0};
+	// ------------------------------------------ Init SPI
+		spi_command_tx[0] = WRITE_COMMAND; // write command
+		spi_command_tx[1] = 0x2D; // Address 0x2D (go bit location)
+		spi_command_tx[2] = 0x02; // go bit value
+
+		alt_avalon_spi_command( ACCELEROMETER_SPI_BASE, 0,
+							  3, spi_command_tx,
+							  0, spi_command_rx,
+							  0);
+	// ------------------------------------------ Read SPI
+		spi_command_tx[0] = READ_COMMAND; // read command
+		spi_command_tx[1] = 0x08; // Address of the data registers
+
+		for(i = 0; i < 5; i++)
+		{
+			alt_avalon_spi_command( ACCELEROMETER_SPI_BASE, 0,
+								  2, spi_command_tx,
+								  3, &accel_data,
+								  0);
+
+			printf("X:%d\t Y:%d\t Z:%d\t\n",accel_data.x, accel_data.y, accel_data.z);
+			for(j = 0; j < 200000; j++);
+		}
+
+		queue_enqueue(q,accel_data.z);
+}
+
+
+/*************************************************/
+
+void print_pix(alt_u32 x,alt_u32 y,alt_u32 rgb)
 {
 	if(rgb <= 7 && rgb >= 0)
 		set_pixel(x,y,rgb);
 	else
 		set_pixel(x,y,0);
 }
-void print_hline(unsigned int x_start, unsigned int y_start, unsigned int len,unsigned int RGB){
+void print_hline(alt_u32 x_start,alt_u32 y_start, alt_u32 len,alt_u32 RGB){
 
 
 
@@ -193,7 +440,7 @@ void print_hline(unsigned int x_start, unsigned int y_start, unsigned int len,un
 	}
 
 }
-void  print_vline(unsigned int x_start, unsigned int y_start, unsigned int len, unsigned int RGB)
+void print_vline(alt_u32 x_start,alt_u32 y_start, alt_u32 len, alt_u32 RGB)
 {
 	if(y_start + len <= 240){
 			for(int i = 0; i < len; i++){
@@ -208,7 +455,7 @@ void  print_vline(unsigned int x_start, unsigned int y_start, unsigned int len, 
 		}
 }
 
-void  print_char(unsigned int x,unsigned int y,unsigned int rgb,unsigned int BG_RGB,char Character)
+void  print_char(alt_u32 x,alt_u32 y,alt_u32 rgb,alt_u32 BG_RGB,char Character)
 {
 	alt_u8 temp;
 	int row;
@@ -229,7 +476,7 @@ void  print_char(unsigned int x,unsigned int y,unsigned int rgb,unsigned int BG_
 			}
 	}
 }
-void print_str(alt_u16 x_start, alt_u16 y_start,alt_u8 rgb,char *str)
+void print_str(alt_u32 x_start, alt_u32 y_start,alt_u32 rgb,char *str)
 {
 	alt_u16 len = (alt_u16) strlen(str);
 	alt_u16 i;
@@ -238,7 +485,7 @@ void print_str(alt_u16 x_start, alt_u16 y_start,alt_u8 rgb,char *str)
 	}
 }
 
-void print_symmetry_dots_circle(unsigned int x, unsigned int y, unsigned int x_centrum, unsigned int y_centrum, unsigned int rgb)
+void print_symmetry_dots_circle(alt_u32 x, alt_u32 y, alt_u32 x_centrum, alt_u32 y_centrum, alt_u32 rgb)
 {
 		print_pix(x+x_centrum,y + y_centrum,rgb);
 		print_pix(x+x_centrum,-y + y_centrum,rgb);
@@ -251,7 +498,7 @@ void print_symmetry_dots_circle(unsigned int x, unsigned int y, unsigned int x_c
 		print_pix(-y + y_centrum,-x+x_centrum,rgb);
 
 }
-void print_empty_circle(unsigned int radie, unsigned int x_centrum, unsigned int y_centrum, unsigned int rgb)
+void print_empty_circle(alt_u32 radie, alt_u32 x_centrum, alt_u32 y_centrum, alt_u32 rgb)
 {
 		unsigned int value;
 		unsigned int radius = radie;
@@ -277,10 +524,92 @@ void print_empty_circle(unsigned int radie, unsigned int x_centrum, unsigned int
 
 		}
 }
-void print_circle(unsigned int radie, unsigned int x_centrum, unsigned int y_centrum, unsigned int rgb)
+void print_circle(alt_u32 radie, alt_u32 x_centrum, alt_u32 y_centrum, alt_u32 rgb)
 {
 	unsigned int radius = radie;
 
 	for(radius = radie; radius > 0; radius--)
 		print_empty_circle(radius,x_centrum, y_centrum, rgb);
 }
+void clear_screen(alt_u32 rgb){
+	for(int y = 0 ;y <240;y++)
+		for(int x = 0; x < 320; x++)
+			print_pix(x,y,rgb);
+}
+
+pixel_data read_pixel_ram_int(alt_u32 x_start, alt_u32 y_start)
+{
+	alt_u32 i = read_pixel(x_start, y_start);
+	return (alt_u8) i;
+}
+
+/***************************************************/
+
+void queue_init(QUEUE *q)
+{
+    memset(q,0,sizeof(QUEUE));
+    q->rindex = 0;//Probably un-necessay to do this, because of the above line
+    q->windex = 0;
+    q->numitems = 0;
+}
+
+int queue_enqueue(QUEUE *q,int item)
+{
+    int num_items = q->numitems;
+    int* temp_array;
+    int i;
+
+    if(num_items < QUEUESIZE)           //Check to see if the queue is not filled
+    {
+        temp_array = (int *)calloc(num_items,sizeof(int));//Allocate temp array with size equal to the content size of the queue
+        for(i = 0; i < num_items; i++)
+            temp_array[i]= q->items[i];       //Copy the queue to temp array
+
+        q->items[0] = item;                    //Insert the new item in the queue, always at index 0
+
+        for ( i = 1; i < num_items +1; i++)     //Copy back the items from temp array
+            q->items[i] = temp_array[i-1];
+        free(temp_array);                             //Dispose the temp array
+        q->numitems++;                          //increment the number of items
+        q->rindex++;                            //Increment the queue pointer so it points to the next free position in the queue
+        return 1;                               //The enqueue succeeded
+    }
+    else return 0;          //The queue is filled, cannot insert more
+
+}
+
+int queue_dequeue(QUEUE *q,int *item)
+{
+    int num_items = q->numitems;
+
+    if (! num_items == 0)// The queue contains items
+    {
+        *item = q->items[-- q->rindex]; //Decrement the end pointer because it points to a at the first empty position in the FIFO
+         q->numitems--;                 //Decrement the number of items in the queue
+         return 1;                      //Return success because the dequeing succeeded/ the queue was not empty
+    }
+    else return 0;          //The queue is empty, nothing can be dequeued
+
+
+}
+
+void queue_print(QUEUE *q)
+{
+    int i = 0;
+    for (i = q->numitems-1; i>= 0; i--){  //print in FIFO order, oldest first
+        printf("%d", q->items[i] );
+    }
+    printf("\n");
+}
+void queue_print_screen(QUEUE *q, int x_origo, int y_origo, int normalization, int offset, int rgb){
+	 int i = 0;
+	 int j;
+	    for (i = q->numitems-1; i>= 0; i--){  //print in FIFO order, oldest first
+	        printf("Un-normalized %d\n normalized %d\n", q->items[i],q->items[i]/normalization );
+	        j = q->numitems-1 -i;
+	        printf("j%d\n",j);
+	        print_pix(x_origo + j, y_origo-offset - q->items[i]/normalization,rgb);
+	    }
+}
+
+

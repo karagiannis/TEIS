@@ -3,7 +3,7 @@
 <stringAttribute key="byteStreamDeviceCableName" value="USB-Blaster on localhost [USB-0]"/>
 <stringAttribute key="byteStreamDeviceDeviceID" value="1"/>
 <stringAttribute key="byteStreamDeviceInstanceID" value="0"/>
-<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="62236"/>
+<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="61200"/>
 <booleanAttribute key="downloadProgram" value="true"/>
 <stringAttribute key="elfFile" value="C:\Users\root\Documents\TEIS2016\C-kurs\Task12\HW_C_engjob\HW_C_ingjob\software\C_eng_job\C_eng_job.elf"/>
 <stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=""/>

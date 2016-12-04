@@ -1,2 +1,6 @@
 1480754890047	Delete resource 'C_eng_job'
 1480754897918	Delete resource 'C_eng_job_bsp'
+1480853792257	Delete resource 'C_eng_job_bsp/drivers/inc/queue.h'
+1480853805154	Delete resource 'C_eng_job_bsp/drivers/src/queue.c'
+1480860837929	Delete resource 'C_eng_job/queue.c'
+1480860847890	Delete resource 'C_eng_job/queue.h'
