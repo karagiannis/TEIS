@@ -676,7 +676,7 @@ void print_welcome_screen(){
 	print_str(50,150,2,"Press any key to continue");
 	alt_u32 key = 0;
 	key = IORD_32DIRECT(KEY_INPUT_BASE,0);
-	while(key != 7);
+	while(key < 7);
 
 
 }

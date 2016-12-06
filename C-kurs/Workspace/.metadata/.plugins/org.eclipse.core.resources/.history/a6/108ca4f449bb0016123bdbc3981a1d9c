@@ -671,12 +671,11 @@ void print_welcome_screen(){
 		print_circle(radie,  x_centrum, y_centrum, rgb);
 	}
 	*/
-	print_circle(10,  320/2, 240/2, 4);
+	print_circle(50,  320/2, 240/2, 4);
 	print_str(50,50,2,"Welcome to measurement station!");
 	print_str(50,150,2,"Press any key to continue");
-	alt_u32 key = 0;
-	key = IORD_32DIRECT(KEY_INPUT_BASE,0);
-	while(key != 7);
+	alt_u8 key = IORD_32DIRECT(KEY_INPUT_BASE,0);
+	while(key < 7);
 
 
 }

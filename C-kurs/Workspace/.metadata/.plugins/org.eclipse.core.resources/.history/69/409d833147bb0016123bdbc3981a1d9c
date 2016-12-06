@@ -661,24 +661,10 @@ pixel_data read_pixel_ram_int(alt_u32 x_start, alt_u32 y_start)
 
 void print_welcome_screen(){
 	clear_screen(0);
-	/*for (int i = 0; i < 100; i++){
-		int x_centrum = rand() % 320;
-		int y_centrum = rand()%240;
-		printf("x %d\n",x_centrum);
-		printf("y %d\n",y_centrum);
-		int radie = rand() % 50;
-		int rgb = rand() % 8;
-		print_circle(radie,  x_centrum, y_centrum, rgb);
-	}
-	*/
-	print_circle(10,  320/2, 240/2, 4);
-	print_str(50,50,2,"Welcome to measurement station!");
-	print_str(50,150,2,"Press any key to continue");
-	alt_u32 key = 0;
-	key = IORD_32DIRECT(KEY_INPUT_BASE,0);
-	while(key != 7);
-
-
+	int x = rand() % 320;
+	int y = rand()%240;
+	printf("x %d\n",x);
+	printf("y &d\n",y);
 }
 
 /***************************************************/
