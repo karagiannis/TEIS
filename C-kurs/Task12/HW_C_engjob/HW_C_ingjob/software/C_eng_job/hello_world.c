@@ -37,7 +37,8 @@
 #define ADC_READ_PHOTO IORD_32DIRECT(MODULAR_ADC_0_SAMPLE_STORE_CSR_BASE, 0)  // Read ADC value
 #define ADC_READ_TEMP IORD_32DIRECT(MODULAR_ADC_0_SAMPLE_STORE_CSR_BASE, 4)  // Read ADC value
 
-#define RELEASE
+
+//#define DEBUG
 
 alt_u32 i = 0;
 alt_u32 j = 0;
@@ -74,21 +75,21 @@ void print_welcome_screen();
 
 /************************************************/
 
-#define QUEUESIZE 50
+#define QUEUESIZE 10
 
-typedef struct
+typedef struct myQUEUE
 {
     int items[QUEUESIZE];
     int rindex;
     int windex;
     int numitems;
-} QUEUE;
+}QUEUE;
 
 void queue_init(QUEUE *q);
 int queue_enqueue(QUEUE *q,int item);
 int queue_dequeue(QUEUE *q);
 void queue_print(QUEUE *q);
-void queue_print_screen(QUEUE *q, int x_origo, int y_origo, int normalization, int offset, int rgb);
+
 
 
 /***************************************************/
@@ -110,58 +111,66 @@ struct SENSOR_CLASS {
     QUEUE queue;
     QUEUE *q;
     void (*configure_time_base)(alt_u32, void*);
-    void (*reset_samples_vector)(QUEUE*);
+    void (*init_measurement)(QUEUE*);
     void (*read_sensor)(QUEUE*);
     void (*update_graph)(void*);
     void *this;
+    void (*draw_graph)(void*);
 };
 
 void config_time_base(alt_u32, SENSOR_OBJECT*);
 void init_measurement(SENSOR_OBJECT*);
-void read_accelerometerX(QUEUE *q);
+void read_accelerometerX(QUEUE *);
 void update_graph(SENSOR_OBJECT*);
-void read_accelerometerY(QUEUE *q);
-void read_accelerometerZ(QUEUE *q);
+void draw_graph(SENSOR_OBJECT*);
+//void read_accelerometerY(QUEUE *q);
+//void read_accelerometerZ(QUEUE *q);
 void read_temp(QUEUE *q);
 void read_light(QUEUE *q);
+void queue_print_screen(QUEUE *q, int x_origo, int y_origo, int normalization, int offset, int rgb, SENSOR_OBJECT *sensor_obj);
 
+unsigned int i2bcd(unsigned int i);
+void update_time(unsigned int i);
 
-/*struct SENSOR_OBJECT sensorArray[5] =
-{
-
-
-};*/
 
 int main()
 {
 	print_welcome_screen();
 	enum sampling_state state = fast_sampling;
-	QUEUE q1,q2,q3,q4,q5;
+	QUEUE q1;
+	//QUEUE q2;
+	//QUEUE q3;
+	QUEUE q4;
+	QUEUE q5;
 	QUEUE* q11 = &q1;
-	QUEUE* q22 = &q2;
-	QUEUE* q33 = &q3;
+	//QUEUE* q22 = &q2;
+	//QUEUE* q33 = &q3;
 	QUEUE* q44 = &q4;
 	QUEUE* q55 = &q5;
 
+
+
 	SENSOR_OBJECT accelorometerX =
 		{	"Accelerom. x",
-			30, 50,1,1,50,4, q1,q11,
+			30, 50,1,1,25,4, q1,q11,
 			config_time_base,
 			init_measurement,
 			read_accelerometerX,
 			update_graph,
-			&accelorometerX
+			&accelorometerX,
+			draw_graph
 		};
 
-	SENSOR_OBJECT accelorometerY =
-			{	"Accelerom. y",
-				320/3 +30, 50,1,1,20,4, q2,q22,
-				config_time_base,
-				init_measurement,
-				read_accelerometerY,
-				update_graph,
-				&accelorometerY
-			};
+	/*SENSOR_OBJECT accelorometerY =
+					{	"Accelerom. y",
+						320/3 +30, 50,1,1,20,4, q2,q22,
+						config_time_base,
+						init_measurement,
+						read_accelerometerY,
+						update_graph,
+						&accelorometerY,
+						draw_graph
+					};
 
 	SENSOR_OBJECT accelorometerZ =
 				{	"Accelerom. z",
@@ -170,34 +179,41 @@ int main()
 					init_measurement,
 					read_accelerometerZ,
 					update_graph,
-					&accelorometerZ
+					&accelorometerZ,
+					draw_graph
 				};
-
+*/
 	SENSOR_OBJECT temp_sensor =
 					{	"Temperature",
-						30, 170,1,100,10,4, q4,q44,
+						30, 180,1,100,10,4, q4,q44,
 						config_time_base,
 						init_measurement,
 						read_temp,
 						update_graph,
-						&temp_sensor
+						&temp_sensor,
+						draw_graph
 					};
 
 	SENSOR_OBJECT light_sensor =
 						{	"Light",
-							320/3 +30, 170,1,100,10,4, q5,q55,
+							320/3 +30, 180,1,100,10,4, q5,q55,
 							config_time_base,
 							init_measurement,
 							read_light,
 							update_graph,
-							&light_sensor
+							&light_sensor,
+							draw_graph
 						};
 
-SENSOR_OBJECT sensors[5]={accelorometerX,
+/*SENSOR_OBJECT sensors[5]={accelorometerX,
 							accelorometerY,
 							accelorometerZ,
 							temp_sensor,
-							light_sensor};
+							light_sensor};*/
+
+	SENSOR_OBJECT sensors[3]={accelorometerX,
+								temp_sensor,
+								light_sensor};
 
 
 
@@ -212,8 +228,9 @@ SENSOR_OBJECT sensors[5]={accelorometerX,
 		print_str(2*320/3 +5,210-30,5,"2nd btn 10Hz");
 		print_str(2*320/3 +5,210,5,"L.Karagiannis");
 
-		for(int i = 0; i<5; i++)
-			sensors[i].reset_samples_vector(&sensors[i]);
+
+		for(int i = 2; i<3; i++)
+			sensors[i].init_measurement(&sensors[i]);
 
 	while(1){
 
@@ -226,12 +243,14 @@ SENSOR_OBJECT sensors[5]={accelorometerX,
 		switch(state){
 		case fast_sampling:
 #ifdef DEBUG
-			printf("fast\n");
+			alt_printf("fast\n");
 #endif
 			TIMER_RESET;
 			TIMER_START;
-			while(TIMER_READ < 50000000);
-			for(int i = 0; i<5; i++){
+			while(TIMER_READ < 5000000);
+			update_time(1);
+
+			for(int i = 2; i<3; i++){
 				sensors[i].configure_time_base(1,&sensors[i]);
 				sensors[i].read_sensor(sensors[i].q);
 				sensors[i].update_graph(&sensors[i]);
@@ -239,16 +258,17 @@ SENSOR_OBJECT sensors[5]={accelorometerX,
 			break;
 		case slow_sampling:
 #ifdef DEBUG
-			printf("slow\n");
+			alt_printf("slow\n");
 #endif
 			TIMER_RESET;
 			TIMER_START;
 			for (int i = 0; i < 10;i++){
 				while(TIMER_READ < 50000000);
+				update_time(10);
 				TIMER_RESET;
 				TIMER_START;
 			}
-			for(int i = 0; i<5; i++){
+			for(int i = 2; i<3; i++){
 				sensors[i].configure_time_base(10,&sensors[i]);
 				sensors[i].read_sensor(sensors[i].q);
 				sensors[i].update_graph(&sensors[i]);
@@ -256,117 +276,6 @@ SENSOR_OBJECT sensors[5]={accelorometerX,
            break;
 		}
 	}
-
-#ifdef DEBUG
-	printf("Test for all components initiate!\n\n");
-	for(i = 0; i < 78600; i++)
-		set_address_pixel(i, 0);
-
-	print_hline(0,120,320,6);
-	print_vline(160,0,240,2);
-	print_char(100,100,5,0,'A');
-	print_char(200,100,5,0,'a');
-	print_str(150,150,5,"Lasse Karagiannis");
-	print_circle(20, 200,200,5);
-
-	for(i = 0; i < 320; i++){
-		set_pixel(i,0,7);//kolumn, rad, färg
-		set_pixel(i,239,7);
-	}
-	for(i = 0; i < 240; i++){
-		set_pixel(0,i,7);
-		set_pixel(319,i,7);
-	}
-	for(i = 0; i < 100; i++)
-		for(j = 0; j < 100; j++){
-			set_pixel(i+1,j+1,1);
-			set_pixel(318-i,j+1,2);
-			set_pixel(i+1,238-j,4);
-		}
-	set_pixel(0,0,1);
-	set_pixel(1,1,2);
-	set_pixel(2,2,4);
-
-	i = read_pixel(0,0);
-	printf("value 0,0: %d\t First bit, Blue\n", i);
-	i = read_pixel(1,1);
-	printf("value 1,1: %d\t Second bit, Green\n", i);
-	i = read_pixel(2,2);
-	printf("value 2,2: %d\t Third bit, Red\n", i);
-	printf("---- VGA test complete ----\n\n");
-
-// ------------------------------------------ Init SPI
-	spi_command_tx[0] = WRITE_COMMAND; // write command
-	spi_command_tx[1] = 0x2D; // Address 0x2D (go bit location)
-	spi_command_tx[2] = 0x02; // go bit value
-
-	alt_avalon_spi_command( ACCELEROMETER_SPI_BASE, 0,
-						  3, spi_command_tx,
-						  0, spi_command_rx,
-						  0);
-// ------------------------------------------ Read SPI
-	spi_command_tx[0] = READ_COMMAND; // read command
-	spi_command_tx[1] = 0x08; // Address of the data registers
-
-	for(i = 0; i < 5; i++)
-	{
-		alt_avalon_spi_command( ACCELEROMETER_SPI_BASE, 0,
-							  2, spi_command_tx,
-							  3, &accel_data,
-							  0);
-
-		printf("X:%d\t Y:%d\t Z:%d\t\n",accel_data.x, accel_data.y, accel_data.z);
-		for(j = 0; j < 200000; j++);
-	}
-	printf("---- SPI test complete ----\n\n");
-
-	ADC_INIT;
-	for(i = 0; i < 5; i++)
-	{
-		printf("ADC Photo: %d\t", ADC_READ_PHOTO);
-		printf("ADC Temp: %d\n", ADC_READ_TEMP);
-		for(j = 0; j < 200000; j++);
-	}
-	printf("---- ADC test complete ----\n\n");
-
-	for(i = 0; i < 5; i++)
-	{
-		TIMER_RESET;
-		TIMER_START;
-		while(TIMER_READ < 50000000);
-		printf("%d sec\n", i+1);
-	}
-
-	printf("---- Timer test complete ----\n\n");
-
-	for(i = 0; i < 8; i++)
-	{
-		IOWR_32DIRECT(LED_BASE, 0, 1<<i);
-		for(j = 0; j < 50000; j++);
-	}
-	for(i = 0; i < 8; i++)
-	{
-		IOWR_32DIRECT(LED_BASE, 0, 1<<7-i);
-		for(j = 0; j < 50000; j++);
-	}
-	IOWR_32DIRECT(LED_BASE, 0, 0);
-	printf("---- LED test complete ----\n\n");
-
-	for(i = 0; i < 3; i++)
-	{
-		printf("Press button %d!\n", i+1);
-		while(IORD_32DIRECT(KEY_INPUT_BASE,0) & 1<<i);
-		clear_screen(i+2);
-		int k = read_pixel_ram_int(59,59);
-		printf("Pixeldata ram is %d\n",k);
-
-	}
-	printf("---- KEY test complete ----\n\n");
-
-	printf("All tests complete!\n");
-	print_circle(20, 200,200,5);
-
-#endif
 
 	return 0;
 }
@@ -380,6 +289,8 @@ void read_temp(QUEUE *q){
 							queue_dequeue(q);
 							queue_enqueue(q,temp);
 						}
+		alt_printf("nu");
+		 queue_print(q);
 }
 void read_light(QUEUE *q){
 	ADC_INIT;
@@ -389,7 +300,8 @@ void read_light(QUEUE *q){
 							else{
 								queue_dequeue(q);
 								queue_enqueue(q,light);
-							}
+			alt_printf("printar nu");				}
+			queue_print(q);
 }
 /************************************************/
 void config_time_base(alt_u32 time_base, SENSOR_OBJECT* sensor_obj){
@@ -397,13 +309,17 @@ void config_time_base(alt_u32 time_base, SENSOR_OBJECT* sensor_obj){
 }
 void init_measurement(SENSOR_OBJECT* sensor_obj){
 	queue_init(sensor_obj->q);
+	sensor_obj->draw_graph(sensor_obj);
+}
+
+void draw_graph(SENSOR_OBJECT* sensor_obj){
 	print_char(sensor_obj->x_origo +55,sensor_obj->y_origo -3,7,0,'>');
-	print_hline(sensor_obj->x_origo,sensor_obj->y_origo,60,7);
+		print_hline(sensor_obj->x_origo,sensor_obj->y_origo,60,7);
 
-	print_char(sensor_obj->x_origo -4,sensor_obj->y_origo -45,7,0,'^');
-	print_vline(sensor_obj->x_origo-1,sensor_obj->y_origo -45,45,7);
+		print_char(sensor_obj->x_origo -4,sensor_obj->y_origo -45,7,0,'^');
+		print_vline(sensor_obj->x_origo-1,sensor_obj->y_origo -45,45,7);
 
-	print_str(sensor_obj->x_origo -20, sensor_obj->y_origo +10,7,sensor_obj->description);
+		print_str(sensor_obj->x_origo -20, sensor_obj->y_origo +10,7,sensor_obj->description);
 }
 void update_graph(SENSOR_OBJECT* sensor_obj){
 #ifdef DEBUG
@@ -414,7 +330,7 @@ void update_graph(SENSOR_OBJECT* sensor_obj){
 			sensor_obj->y_origo,
 			sensor_obj->normalization_factor,
 			sensor_obj->offset,
-			sensor_obj->rgb);
+			sensor_obj->rgb,sensor_obj );
 }
 void read_accelerometerX(QUEUE *q)
 {
@@ -440,7 +356,7 @@ void read_accelerometerX(QUEUE *q)
 								  3, &accel_data,
 								  0);
 #ifdef DEBUG
-			printf("X:%d\t Y:%d\t Z:%d\t\n",accel_data.x, accel_data.y, accel_data.z);
+			alt_printf("X:%d\t Y:%d\t Z:%d\t\n",accel_data.x, accel_data.y, accel_data.z);
 #endif
 
 		alt_32 accel_x = 0;
@@ -453,6 +369,7 @@ void read_accelerometerX(QUEUE *q)
 					queue_enqueue(q,accel_x);
 				}
 }
+/*
 void read_accelerometerY(QUEUE *q)
 {
 	ACCELEROMETER accel_data;
@@ -477,7 +394,7 @@ void read_accelerometerY(QUEUE *q)
 								  3, &accel_data,
 								  0);
 #ifdef DEBUG
-			printf("X:%d\t Y:%d\t Z:%d\t\n",accel_data.x, accel_data.y, accel_data.z);
+			alt_printf("X:%d\t Y:%d\t Z:%d\t\n",accel_data.x, accel_data.y, accel_data.z);
 #endif
 
 		alt_32 accel_y = 0;
@@ -515,7 +432,7 @@ void read_accelerometerZ(QUEUE *q)
 								  3, &accel_data,
 								  0);
 #ifdef DEBUG
-			printf("X:%d\t Y:%d\t Z:%d\t\n",accel_data.x, accel_data.y, accel_data.z);
+			alt_printf("X:%d\t Y:%d\t Z:%d\t\n",accel_data.x, accel_data.y, accel_data.z);
 #endif
 
 		alt_32 accel_z = 0;
@@ -529,7 +446,7 @@ void read_accelerometerZ(QUEUE *q)
 				}
 }
 
-
+*/
 /*************************************************/
 
 void print_pix(alt_u32 x,alt_u32 y,alt_u32 rgb)
@@ -608,10 +525,10 @@ void print_symmetry_dots_circle(alt_u32 x, alt_u32 y, alt_u32 x_centrum, alt_u32
 		print_pix(-x+x_centrum,y + y_centrum,rgb);
 		print_pix(-x+x_centrum,-y + y_centrum,rgb);
 
-		print_pix(y + y_centrum,x+x_centrum,rgb);
-		print_pix(-y + y_centrum,x+x_centrum,rgb);
-		print_pix(y + y_centrum,-x+x_centrum,rgb);
-		print_pix(-y + y_centrum,-x+x_centrum,rgb);
+		print_pix(y + x_centrum,x+y_centrum,rgb);
+		print_pix(-y + x_centrum,x+y_centrum,rgb);
+		print_pix(y + x_centrum,-x+y_centrum,rgb);
+		print_pix(-y + x_centrum,-x+y_centrum,rgb);
 
 }
 void print_empty_circle(alt_u32 radie, alt_u32 x_centrum, alt_u32 y_centrum, alt_u32 rgb)
@@ -664,19 +581,20 @@ void print_welcome_screen(){
 	/*for (int i = 0; i < 100; i++){
 		int x_centrum = rand() % 320;
 		int y_centrum = rand()%240;
-		printf("x %d\n",x_centrum);
-		printf("y %d\n",y_centrum);
+		alt_alt_printf("x %d\n",x_centrum);
+		alt_alt_printf("y %d\n",y_centrum);
 		int radie = rand() % 50;
 		int rgb = rand() % 8;
 		print_circle(radie,  x_centrum, y_centrum, rgb);
 	}
 	*/
-	print_circle(10,  320/2, 240/2, 4);
+	print_circle(10,  320/2, 240/2, 3);
 	print_str(50,50,2,"Welcome to measurement station!");
 	print_str(50,150,2,"Press any key to continue");
 	alt_u32 key = 0;
 	key = IORD_32DIRECT(KEY_INPUT_BASE,0);
-	while(key != 7);
+	while(key == 7)
+		key = IORD_32DIRECT(KEY_INPUT_BASE,0);
 
 
 }
@@ -695,6 +613,7 @@ int queue_enqueue(QUEUE *q,int item)
 {
     int num_items = q->numitems;
     int* temp_array;
+    //int temp_array[QUEUESIZE];
     int i;
 
     if(num_items < QUEUESIZE)           //Check to see if the queue is not filled
@@ -751,25 +670,29 @@ void queue_print(QUEUE *q)
 {
     int i = 0;
     for (i = q->numitems-1; i>= 0; i--){  //print in FIFO order, oldest first
-        printf("%d", q->items[i] );
+        alt_printf("%d", q->items[i] );
     }
-    printf("\n");
+    alt_printf("\n");
 }
-void queue_print_screen(QUEUE *q, int x_origo, int y_origo, int normalization, int offset, int rgb){
+void queue_print_screen(QUEUE *q, int x_origo, int y_origo, int normalization, int offset, int rgb, SENSOR_OBJECT *sensor_obj){
 	 int i = 0;
 	 int j;
+	 int mean = 0;
 	 int value;
 	    for (i = q->numitems-1; i>= 0; i--){  //print in FIFO order, oldest first
 #ifdef DEBUG
-	        printf("Un-normalized %d\n normalized %d\n", q->items[i],q->items[i]/normalization );
+	        alt_printf("Un-normalized %d\n normalized %d\n", q->items[i],q->items[i]/normalization );
 #endif
 	        j = q->numitems-1 -i;
+	        mean = mean + q->items[i];
 #ifdef DEBUG
-	        printf("j%d\n",j);
+	        alt_printf("j%d\n",j);
 #endif
-	        for(int k = 1; k < 40;k++)
+
+	        for(int k = 1; k < 55;k++)
 	        	print_pix(x_origo + j, y_origo-k,0);//Blank out previous measurement
 	        print_pix(x_origo + j, y_origo,7);//Fix ccordinate system line
+	        sensor_obj->draw_graph(sensor_obj);
 	        value = offset + q->items[i]/normalization;
 	        if(offset + q->items[i]/normalization > 40)
 	        	value = 40;
@@ -777,7 +700,108 @@ void queue_print_screen(QUEUE *q, int x_origo, int y_origo, int normalization, i
 	          value = 0;
 
 	        print_pix(x_origo + j,y_origo-value,rgb);
+	        int  bcd = i2bcd(abs(q->items[0]));
+	        if(q->items[0] & 0x80000000)//negative
+	        	print_char(x_origo +24, y_origo+30,4,0,'-');
+
+	        	char c = (char)((bcd & 0xF000) >>12);
+	        	short s = (short) c +48;
+	        	print_char(x_origo +30, y_origo+30,4,0,(char)s);
+
+	        	c = (char)((bcd & 0x0F00) >>8);
+	        	s = (short) c +48;
+	        	print_char(x_origo +38, y_origo+30,4,0,(char)s);
+
+	        	c = (char)((bcd & 0x0F0) >>4);
+	        	s = (short) c +48;
+	        	print_char(x_origo +46, y_origo+30,4,0,(char)s);
+
+	        	c = (char)(bcd & 0x0F);
+	        	s = (short) c +48;
+	        	print_char(x_origo +54, y_origo+30,4,0,(char)s);
+
+
 	    }
+	    mean = mean/q->numitems;
+	    int offs = 25 - mean/normalization;
+	    sensor_obj->offset = offs;
 }
 
+unsigned int i2bcd(unsigned int i) {
+    unsigned int binaryShift = 1;
+    unsigned int digit,n,mask;
+    unsigned int bcd = 0;
+    alt_printf("%d\n",i);
+    while (i > 0) {
+        digit = i % 10;
+        bcd += (digit << binaryShift);
+        binaryShift += 4;
+        i /= 10;
+    }
+    bcd = bcd >> 1;
+#ifdef DEBUG
+    for (n = 0,mask = 0x80000000;mask != 0;mask>>= 1){
+            if((n==4) || (n==8)|| (n == 12)|| n== 16 ||n==20|| n==24 ||n==28)
+                putchar(' ');
+            putchar((bcd & mask)? '1':'0');
+            n++;
+        }
+#endif
+    putchar('\n');
+    return bcd;
+}
 
+void update_time(unsigned int i){
+
+	static int hours = 0;
+	static int minutes = 0;
+	static int seconds = 0;
+	unsigned int bcd = 0;
+	unsigned int time[3]={hours, minutes,seconds};
+
+	seconds++;
+	if(seconds == 60){
+		seconds = 0;
+		minutes++;
+		if (minutes == 60){
+			minutes = 0;
+			hours++;
+		}
+	}
+
+	char c;
+	short s;
+	bcd = i2bcd(hours);
+	c = (char)((bcd & 0x0F0) >>4);
+	s = (short) c +48;
+	print_char(320/3-50 +30 +46, 50+30,4,0,(char)s);
+
+	c = (char)(bcd & 0x0F);
+	s = (short) c +48;
+	print_char(320/3 -50+30 +54,50+30,4,0,(char)s);
+
+	print_char(320/3-50 +30 +54+8,50+30,4,0,':');
+
+	bcd = i2bcd(minutes);
+	c = (char)((bcd & 0x0F0) >>4);
+	s = (short) c +48;
+	print_char(320/3-50 +30 +54+8+8, 50+30,4,0,(char)s);
+
+	c = (char)(bcd & 0x0F);
+	s = (short) c +48;
+	print_char(320/3-50 +30 +54+8+8+8,50+30,4,0,(char)s);
+
+	print_char(320/3-50 +30 +54+8+8+8+8,50+30,4,0,':');
+
+
+	bcd = i2bcd(seconds);
+		c = (char)((bcd & 0x0F0) >>4);
+		s = (short) c +48;
+		print_char(320/3-50 +30 +54+40, 50+30,4,0,(char)s);
+
+		c = (char)(bcd & 0x0F);
+		s = (short) c +48;
+		print_char(320/3-50 +30 +54+48,50+30,4,0,(char)s);
+
+
+}
