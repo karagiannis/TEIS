@@ -8511,3 +8511,51 @@ java.io.IOException: Stream closed
 
 !ENTRY com.altera.sbtgui.launch 1 0 2016-12-10 01:17:34.966
 !MESSAGE Executing: [C:/altera_lite/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/root/Documents/TEIS2016/C-kurs/Task12/HW_C_engjob/HW_C_ingjob/software/C_eng_job/C_eng_job.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-10 01:33:48.795
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-10 01:33:50.796
+!MESSAGE Executing: [C:/altera_lite/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-10 01:33:52.426
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-10 01:33:53.666
+!MESSAGE Executing: [C:/altera_lite/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/root/Documents/TEIS2016/C-kurs/Task12/HW_C_engjob/HW_C_ingjob/software/C_eng_job/C_eng_job.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-10 01:35:48.018
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-10 01:35:49.494
+!MESSAGE Executing: [C:/altera_lite/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-10 01:35:50.946
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-10 01:35:52.244
+!MESSAGE Executing: [C:/altera_lite/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/root/Documents/TEIS2016/C-kurs/Task12/HW_C_engjob/HW_C_ingjob/software/C_eng_job/C_eng_job.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-10 01:39:14.868
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-10 01:39:16.300
+!MESSAGE Executing: [C:/altera_lite/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-10 01:39:17.764
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-10 01:39:19.025
+!MESSAGE Executing: [C:/altera_lite/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/root/Documents/TEIS2016/C-kurs/Task12/HW_C_engjob/HW_C_ingjob/software/C_eng_job/C_eng_job.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-10 01:40:21.250
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-10 01:40:22.838
+!MESSAGE Executing: [C:/altera_lite/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-10 01:40:25.234
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-10 01:40:26.472
+!MESSAGE Executing: [C:/altera_lite/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/root/Documents/TEIS2016/C-kurs/Task12/HW_C_engjob/HW_C_ingjob/software/C_eng_job/C_eng_job.elf]

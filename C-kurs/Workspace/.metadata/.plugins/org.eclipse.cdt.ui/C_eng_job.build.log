@@ -1,9 +1,101 @@
-01:17:30 **** Incremental Build of configuration Nios II for project C_eng_job ****
+02:01:48 **** Incremental Build of configuration Nios II for project C_eng_job ****
 make all 
 Info: Building ../C_eng_job_bsp/
 C:/altera_lite/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../C_eng_job_bsp/
 [BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../C_eng_job_bsp//HAL/inc -I../C_eng_job_bsp/ -I../C_eng_job_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED -DALTERA_AVALON_JTAG_UART_SMALL    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:156:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    config_time_base,
+    ^
+hello_world.c:156:4: note: (near initialization for 'accelorometerX.configure_time_base')
+hello_world.c:157:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    init_measurement,
+    ^
+hello_world.c:157:4: note: (near initialization for 'accelorometerX.init_measurement')
+hello_world.c:159:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    update_graph,
+    ^
+hello_world.c:159:4: note: (near initialization for 'accelorometerX.update_graph')
+hello_world.c:161:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    draw_graph
+    ^
+hello_world.c:161:4: note: (near initialization for 'accelorometerX.draw_graph')
+hello_world.c:189:7: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+       config_time_base,
+       ^
+hello_world.c:189:7: note: (near initialization for 'temp_sensor.configure_time_base')
+hello_world.c:190:7: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+       init_measurement,
+       ^
+hello_world.c:190:7: note: (near initialization for 'temp_sensor.init_measurement')
+hello_world.c:192:7: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+       update_graph,
+       ^
+hello_world.c:192:7: note: (near initialization for 'temp_sensor.update_graph')
+hello_world.c:194:7: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+       draw_graph
+       ^
+hello_world.c:194:7: note: (near initialization for 'temp_sensor.draw_graph')
+hello_world.c:200:8: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+        config_time_base,
+        ^
+hello_world.c:200:8: note: (near initialization for 'light_sensor.configure_time_base')
+hello_world.c:201:8: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+        init_measurement,
+        ^
+hello_world.c:201:8: note: (near initialization for 'light_sensor.init_measurement')
+hello_world.c:203:8: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+        update_graph,
+        ^
+hello_world.c:203:8: note: (near initialization for 'light_sensor.update_graph')
+hello_world.c:205:8: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+        draw_graph
+        ^
+hello_world.c:205:8: note: (near initialization for 'light_sensor.draw_graph')
+hello_world.c:233:32: warning: passing argument 1 of 'sensors[i].init_measurement' from incompatible pointer type [-Wincompatible-pointer-types]
+    sensors[i].init_measurement(&sensors[i]);
+                                ^
+hello_world.c:233:32: note: expected 'QUEUE * {aka struct myQUEUE *}' but argument is of type 'SENSOR_OBJECT * {aka struct SENSOR_CLASS *}'
+hello_world.c: In function 'read_temp':
+hello_world.c:292:3: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+   alt_printf("nu");
+   ^
+hello_world.c: In function 'read_accelerometerX':
+hello_world.c:356:14: warning: passing argument 6 of 'alt_avalon_spi_command' from incompatible pointer type [-Wincompatible-pointer-types]
+           3, &accel_data,
+              ^
+In file included from hello_world.c:24:0:
+../C_eng_job_bsp//drivers/inc/altera_avalon_spi.h:67:5: note: expected 'alt_u8 * {aka unsigned char *}' but argument is of type 'ACCELEROMETER * {aka struct mystruct *}'
+ int alt_avalon_spi_command(alt_u32 base, alt_u32 slave,
+     ^
+hello_world.c: In function 'print_empty_circle':
+hello_world.c:537:16: warning: unused variable 'radius' [-Wunused-variable]
+   unsigned int radius = radie;
+                ^
+hello_world.c:536:16: warning: unused variable 'value' [-Wunused-variable]
+   unsigned int value;
+                ^
+hello_world.c: In function 'i2bcd':
+hello_world.c:710:26: warning: unused variable 'mask' [-Wunused-variable]
+     unsigned int digit,n,mask;
+                          ^
+hello_world.c:710:24: warning: unused variable 'n' [-Wunused-variable]
+     unsigned int digit,n,mask;
+                        ^
+hello_world.c: In function 'update_time':
+hello_world.c:738:15: warning: unused variable 'time' [-Wunused-variable]
+  unsigned int time[3]={hours, minutes,seconds};
+               ^
+Info: Linking C_eng_job.elf
+nios2-elf-g++  -T'../C_eng_job_bsp//linker.x' -msys-crt0='../C_eng_job_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../C_eng_job_bsp/  -msmallc  -Wl,-Map=C_eng_job.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o C_eng_job.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert C_eng_job.elf --thread_model hal --cpu_name Nios2_CPU --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name Engineering_job_emb_sys --quartus_project_dir "C:/Users/root/Documents/TEIS2016/C-kurs/Task12/HW_C_engjob/HW_C_ingjob" --sopcinfo C:/Users/root/Documents/TEIS2016/C-kurs/Task12/HW_C_engjob/HW_C_ingjob/software/C_eng_job_bsp/../../Engineering_job_emb_sys.sopcinfo
+Info: (C_eng_job.elf) 15 KBytes program size (code + initialized data).
+Info:                 8175 KBytes free for stack + heap.
+Info: Creating C_eng_job.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source C_eng_job.elf >C_eng_job.objdump
 [C_eng_job build complete]
 
-01:17:30 Build Finished (took 616ms)
+02:01:54 Build Finished (took 5s.778ms)
 

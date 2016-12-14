@@ -25,7 +25,7 @@
 #include <altera_avalon_spi_regs.h>
 
 #include <altera_avalon_timer_regs.h>
-//#include "font8x8_basic.h"
+
 //#include "queue.h"
 #include "print_util.h"
 #include <string.h>
@@ -229,7 +229,7 @@ int main()
 		print_str(2*320/3 +5,210,5,"L.Karagiannis");
 
 
-		for(int i = 2; i<3; i++)
+		for(int i = 0; i<3; i++)
 			sensors[i].init_measurement(&sensors[i]);
 
 	while(1){
@@ -250,7 +250,7 @@ int main()
 			while(TIMER_READ < 5000000);
 			update_time(1);
 
-			for(int i = 2; i<3; i++){
+			for(int i = 0; i<3; i++){
 				sensors[i].configure_time_base(1,&sensors[i]);
 				sensors[i].read_sensor(sensors[i].q);
 				sensors[i].update_graph(&sensors[i]);
@@ -268,7 +268,7 @@ int main()
 				TIMER_RESET;
 				TIMER_START;
 			}
-			for(int i = 2; i<3; i++){
+			for(int i = 0; i<3; i++){
 				sensors[i].configure_time_base(10,&sensors[i]);
 				sensors[i].read_sensor(sensors[i].q);
 				sensors[i].update_graph(&sensors[i]);
@@ -576,18 +576,11 @@ pixel_data read_pixel_ram_int(alt_u32 x_start, alt_u32 y_start)
 	return (alt_u8) i;
 }
 
+
+
 void print_welcome_screen(){
 	clear_screen(0);
-	/*for (int i = 0; i < 100; i++){
-		int x_centrum = rand() % 320;
-		int y_centrum = rand()%240;
-		alt_alt_printf("x %d\n",x_centrum);
-		alt_alt_printf("y %d\n",y_centrum);
-		int radie = rand() % 50;
-		int rgb = rand() % 8;
-		print_circle(radie,  x_centrum, y_centrum, rgb);
-	}
-	*/
+
 	print_circle(10,  320/2, 240/2, 3);
 	print_str(50,50,2,"Welcome to measurement station!");
 	print_str(50,150,2,"Press any key to continue");
@@ -612,13 +605,13 @@ void queue_init(QUEUE *q)
 int queue_enqueue(QUEUE *q,int item)
 {
     int num_items = q->numitems;
-    int* temp_array;
-    //int temp_array[QUEUESIZE];
+    //int* temp_array;
+    int temp_array[QUEUESIZE];
     int i;
 
     if(num_items < QUEUESIZE)           //Check to see if the queue is not filled
     {
-        temp_array = (int *)calloc(num_items,sizeof(int));//Allocate temp array with size equal to the content size of the queue
+        //temp_array = (int *)calloc(num_items,sizeof(int));//Allocate temp array with size equal to the content size of the queue
         for(i = 0; i < num_items; i++)
             temp_array[i]= q->items[i];       //Copy the queue to temp array
 
@@ -626,7 +619,7 @@ int queue_enqueue(QUEUE *q,int item)
 
         for ( i = 1; i < num_items +1; i++)     //Copy back the items from temp array
             q->items[i] = temp_array[i-1];
-        free(temp_array);                             //Dispose the temp array
+        //free(temp_array);                             //Dispose the temp array
         q->numitems++;                          //increment the number of items
         q->rindex++;                            //Increment the queue pointer so it points to the next free position in the queue
         return 1;                               //The enqueue succeeded
@@ -634,22 +627,7 @@ int queue_enqueue(QUEUE *q,int item)
     else return 0;          //The queue is filled, cannot insert more
 
 }
-/*
-int queue_dequeue(QUEUE *q,int *item)
-{
-    int num_items = q->numitems;
 
-    if (! num_items == 0)// The queue contains items
-    {
-        *item = q->items[-- q->rindex]; //Decrement the end pointer because it points to a at the first empty position in the FIFO
-         q->numitems--;                 //Decrement the number of items in the queue
-         return 1;                      //Return success because the dequeing succeeded/ the queue was not empty
-    }
-    else return 0;          //The queue is empty, nothing can be dequeued
-
-
-}
-*/
 int queue_dequeue(QUEUE *q)
 {
     int num_items = q->numitems;
