@@ -205,7 +205,6 @@ int main()
 							draw_graph
 						};
 
-
 SENSOR_OBJECT sensors[5]={accelorometerX,
 							accelorometerY,
 							accelorometerZ,

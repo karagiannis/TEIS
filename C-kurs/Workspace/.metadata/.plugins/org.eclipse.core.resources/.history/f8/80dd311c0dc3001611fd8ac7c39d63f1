@@ -205,16 +205,15 @@ int main()
 							draw_graph
 						};
 
-
 SENSOR_OBJECT sensors[5]={accelorometerX,
 							accelorometerY,
 							accelorometerZ,
 							temp_sensor,
 							light_sensor};
 
-	/*SENSOR_OBJECT sensors[5]={accelorometerX,
+	SENSOR_OBJECT sensors[5]={accelorometerX,
 								temp_sensor,
-								light_sensor};*/
+								light_sensor};
 
 
 

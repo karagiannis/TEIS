@@ -205,6 +205,16 @@ int main()
 							draw_graph
 						};
 
+	SENSOR_CLASS light_sensor1 =
+							{	"Light",
+								320/3 +30, 180,1,100,10,4, q5,q55,
+								config_time_base,
+								init_measurement,
+								read_light,
+								update_graph,
+								&light_sensor,
+								draw_graph
+							};
 
 SENSOR_OBJECT sensors[5]={accelorometerX,
 							accelorometerY,

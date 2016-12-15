@@ -111,7 +111,7 @@ struct SENSOR_CLASS {
     QUEUE queue;
     QUEUE *q;
     void (*configure_time_base)(alt_u32, void*);
-    void (*init_measurement)(void*);
+    void (*init_measurement)(QUEUE*);
     void (*read_sensor)(QUEUE*);
     void (*update_graph)(void*);
     void *this;
@@ -123,8 +123,8 @@ void init_measurement(SENSOR_OBJECT*);
 void read_accelerometerX(QUEUE *);
 void update_graph(SENSOR_OBJECT*);
 void draw_graph(SENSOR_OBJECT*);
-void read_accelerometerY(QUEUE *q);
-void read_accelerometerZ(QUEUE *q);
+//void read_accelerometerY(QUEUE *q);
+//void read_accelerometerZ(QUEUE *q);
 void read_temp(QUEUE *q);
 void read_light(QUEUE *q);
 void queue_print_screen(QUEUE *q, int x_origo, int y_origo, int normalization, int offset, int rgb, SENSOR_OBJECT *sensor_obj);
@@ -138,13 +138,13 @@ int main()
 	print_welcome_screen();
 	enum sampling_state state = fast_sampling;
 	QUEUE q1;
-	QUEUE q2;
-	QUEUE q3;
+	//QUEUE q2;
+	//QUEUE q3;
 	QUEUE q4;
 	QUEUE q5;
 	QUEUE* q11 = &q1;
-	QUEUE* q22 = &q2;
-    QUEUE* q33 = &q3;
+	//QUEUE* q22 = &q2;
+	//QUEUE* q33 = &q3;
 	QUEUE* q44 = &q4;
 	QUEUE* q55 = &q5;
 
@@ -161,7 +161,7 @@ int main()
 			draw_graph
 		};
 
-	SENSOR_OBJECT accelorometerY =
+	/*SENSOR_OBJECT accelorometerY =
 					{	"Accelerom. y",
 						320/3 +30, 50,1,1,20,4, q2,q22,
 						config_time_base,
@@ -182,7 +182,7 @@ int main()
 					&accelorometerZ,
 					draw_graph
 				};
-
+*/
 	SENSOR_OBJECT temp_sensor =
 					{	"Temperature",
 						30, 180,1,100,10,4, q4,q44,
@@ -205,16 +205,15 @@ int main()
 							draw_graph
 						};
 
-
-SENSOR_OBJECT sensors[5]={accelorometerX,
+/*SENSOR_OBJECT sensors[5]={accelorometerX,
 							accelorometerY,
 							accelorometerZ,
 							temp_sensor,
-							light_sensor};
+							light_sensor};*/
 
-	/*SENSOR_OBJECT sensors[5]={accelorometerX,
+	SENSOR_OBJECT sensors[3]={accelorometerX,
 								temp_sensor,
-								light_sensor};*/
+								light_sensor};
 
 
 

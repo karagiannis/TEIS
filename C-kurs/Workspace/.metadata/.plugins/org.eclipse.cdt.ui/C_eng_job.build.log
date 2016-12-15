@@ -1,4 +1,4 @@
-02:01:48 **** Incremental Build of configuration Nios II for project C_eng_job ****
+22:43:07 **** Incremental Build of configuration Nios II for project C_eng_job ****
 make all 
 Info: Building ../C_eng_job_bsp/
 C:/altera_lite/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../C_eng_job_bsp/
@@ -22,6 +22,38 @@ hello_world.c:161:4: warning: initialization from incompatible pointer type [-Wi
     draw_graph
     ^
 hello_world.c:161:4: note: (near initialization for 'accelorometerX.draw_graph')
+hello_world.c:167:7: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+       config_time_base,
+       ^
+hello_world.c:167:7: note: (near initialization for 'accelorometerY.configure_time_base')
+hello_world.c:168:7: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+       init_measurement,
+       ^
+hello_world.c:168:7: note: (near initialization for 'accelorometerY.init_measurement')
+hello_world.c:170:7: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+       update_graph,
+       ^
+hello_world.c:170:7: note: (near initialization for 'accelorometerY.update_graph')
+hello_world.c:172:7: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+       draw_graph
+       ^
+hello_world.c:172:7: note: (near initialization for 'accelorometerY.draw_graph')
+hello_world.c:178:6: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+      config_time_base,
+      ^
+hello_world.c:178:6: note: (near initialization for 'accelorometerZ.configure_time_base')
+hello_world.c:179:6: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+      init_measurement,
+      ^
+hello_world.c:179:6: note: (near initialization for 'accelorometerZ.init_measurement')
+hello_world.c:181:6: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+      update_graph,
+      ^
+hello_world.c:181:6: note: (near initialization for 'accelorometerZ.update_graph')
+hello_world.c:183:6: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+      draw_graph
+      ^
+hello_world.c:183:6: note: (near initialization for 'accelorometerZ.draw_graph')
 hello_world.c:189:7: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
        config_time_base,
        ^
@@ -54,16 +86,78 @@ hello_world.c:205:8: warning: initialization from incompatible pointer type [-Wi
         draw_graph
         ^
 hello_world.c:205:8: note: (near initialization for 'light_sensor.draw_graph')
-hello_world.c:233:32: warning: passing argument 1 of 'sensors[i].init_measurement' from incompatible pointer type [-Wincompatible-pointer-types]
-    sensors[i].init_measurement(&sensors[i]);
-                                ^
-hello_world.c:233:32: note: expected 'QUEUE * {aka struct myQUEUE *}' but argument is of type 'SENSOR_OBJECT * {aka struct SENSOR_CLASS *}'
+hello_world.c:208:2: error: unknown type name 'SENSOR_CLASS'
+  SENSOR_CLASS light_sensor1 =
+  ^
+hello_world.c:209:10: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+        { "Light",
+          ^
+hello_world.c:209:10: note: (near initialization for 'light_sensor1')
+hello_world.c:210:9: warning: excess elements in scalar initializer
+         320/3 +30, 180,1,100,10,4, q5,q55,
+         ^
+hello_world.c:210:9: note: (near initialization for 'light_sensor1')
+hello_world.c:210:20: warning: excess elements in scalar initializer
+         320/3 +30, 180,1,100,10,4, q5,q55,
+                    ^
+hello_world.c:210:20: note: (near initialization for 'light_sensor1')
+hello_world.c:210:24: warning: excess elements in scalar initializer
+         320/3 +30, 180,1,100,10,4, q5,q55,
+                        ^
+hello_world.c:210:24: note: (near initialization for 'light_sensor1')
+hello_world.c:210:26: warning: excess elements in scalar initializer
+         320/3 +30, 180,1,100,10,4, q5,q55,
+                          ^
+hello_world.c:210:26: note: (near initialization for 'light_sensor1')
+hello_world.c:210:30: warning: excess elements in scalar initializer
+         320/3 +30, 180,1,100,10,4, q5,q55,
+                              ^
+hello_world.c:210:30: note: (near initialization for 'light_sensor1')
+hello_world.c:210:33: warning: excess elements in scalar initializer
+         320/3 +30, 180,1,100,10,4, q5,q55,
+                                 ^
+hello_world.c:210:33: note: (near initialization for 'light_sensor1')
+hello_world.c:210:36: warning: excess elements in scalar initializer
+         320/3 +30, 180,1,100,10,4, q5,q55,
+                                    ^
+hello_world.c:210:36: note: (near initialization for 'light_sensor1')
+hello_world.c:210:39: warning: excess elements in scalar initializer
+         320/3 +30, 180,1,100,10,4, q5,q55,
+                                       ^
+hello_world.c:210:39: note: (near initialization for 'light_sensor1')
+hello_world.c:211:9: warning: excess elements in scalar initializer
+         config_time_base,
+         ^
+hello_world.c:211:9: note: (near initialization for 'light_sensor1')
+hello_world.c:212:9: warning: excess elements in scalar initializer
+         init_measurement,
+         ^
+hello_world.c:212:9: note: (near initialization for 'light_sensor1')
+hello_world.c:213:9: warning: excess elements in scalar initializer
+         read_light,
+         ^
+hello_world.c:213:9: note: (near initialization for 'light_sensor1')
+hello_world.c:214:9: warning: excess elements in scalar initializer
+         update_graph,
+         ^
+hello_world.c:214:9: note: (near initialization for 'light_sensor1')
+hello_world.c:215:9: warning: excess elements in scalar initializer
+         &light_sensor,
+         ^
+hello_world.c:215:9: note: (near initialization for 'light_sensor1')
+hello_world.c:216:9: warning: excess elements in scalar initializer
+         draw_graph
+         ^
+hello_world.c:216:9: note: (near initialization for 'light_sensor1')
+hello_world.c:208:15: warning: unused variable 'light_sensor1' [-Wunused-variable]
+  SENSOR_CLASS light_sensor1 =
+               ^
 hello_world.c: In function 'read_temp':
-hello_world.c:292:3: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+hello_world.c:303:3: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
    alt_printf("nu");
    ^
 hello_world.c: In function 'read_accelerometerX':
-hello_world.c:356:14: warning: passing argument 6 of 'alt_avalon_spi_command' from incompatible pointer type [-Wincompatible-pointer-types]
+hello_world.c:367:14: warning: passing argument 6 of 'alt_avalon_spi_command' from incompatible pointer type [-Wincompatible-pointer-types]
            3, &accel_data,
               ^
 In file included from hello_world.c:24:0:
@@ -71,31 +165,24 @@ In file included from hello_world.c:24:0:
  int alt_avalon_spi_command(alt_u32 base, alt_u32 slave,
      ^
 hello_world.c: In function 'print_empty_circle':
-hello_world.c:537:16: warning: unused variable 'radius' [-Wunused-variable]
+hello_world.c:548:16: warning: unused variable 'radius' [-Wunused-variable]
    unsigned int radius = radie;
                 ^
-hello_world.c:536:16: warning: unused variable 'value' [-Wunused-variable]
+hello_world.c:547:16: warning: unused variable 'value' [-Wunused-variable]
    unsigned int value;
                 ^
 hello_world.c: In function 'i2bcd':
-hello_world.c:710:26: warning: unused variable 'mask' [-Wunused-variable]
+hello_world.c:721:26: warning: unused variable 'mask' [-Wunused-variable]
      unsigned int digit,n,mask;
                           ^
-hello_world.c:710:24: warning: unused variable 'n' [-Wunused-variable]
+hello_world.c:721:24: warning: unused variable 'n' [-Wunused-variable]
      unsigned int digit,n,mask;
                         ^
 hello_world.c: In function 'update_time':
-hello_world.c:738:15: warning: unused variable 'time' [-Wunused-variable]
+hello_world.c:749:15: warning: unused variable 'time' [-Wunused-variable]
   unsigned int time[3]={hours, minutes,seconds};
                ^
-Info: Linking C_eng_job.elf
-nios2-elf-g++  -T'../C_eng_job_bsp//linker.x' -msys-crt0='../C_eng_job_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../C_eng_job_bsp/  -msmallc  -Wl,-Map=C_eng_job.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o C_eng_job.elf obj/default/hello_world.o -lm -msys-lib=m
-nios2-elf-insert C_eng_job.elf --thread_model hal --cpu_name Nios2_CPU --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name Engineering_job_emb_sys --quartus_project_dir "C:/Users/root/Documents/TEIS2016/C-kurs/Task12/HW_C_engjob/HW_C_ingjob" --sopcinfo C:/Users/root/Documents/TEIS2016/C-kurs/Task12/HW_C_engjob/HW_C_ingjob/software/C_eng_job_bsp/../../Engineering_job_emb_sys.sopcinfo
-Info: (C_eng_job.elf) 15 KBytes program size (code + initialized data).
-Info:                 8175 KBytes free for stack + heap.
-Info: Creating C_eng_job.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source C_eng_job.elf >C_eng_job.objdump
-[C_eng_job build complete]
+make: *** [obj/default/hello_world.o] Error 1
 
-02:01:54 Build Finished (took 5s.778ms)
+22:43:08 Build Finished (took 1s.113ms)
 
