@@ -86,7 +86,7 @@ ACDS_VERSION := 16.0
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := $(ABS_BSP_ROOT_DIR)/../../Engineering_job_emb_sys.sopcinfo
+SOPCINFO_FILE := $(ABS_BSP_ROOT_DIR)/../../../../../../../Test_area-debug/TEIS-51fc541f4b82b330dfbc279f73cc6cecf32eecc2/C-kurs/Task12/HW_C_engjob/HW_C_ingjob/Engineering_job_emb_sys.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false

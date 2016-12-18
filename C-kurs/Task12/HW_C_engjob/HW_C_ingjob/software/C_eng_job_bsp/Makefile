@@ -100,8 +100,8 @@ ACDS_VERSION := 16.0
 # used to generate this makefile. 
 # BUILD_NUMBER: 211
 
-SETTINGS_FILE := settings.bsp
-SOPC_FILE := ../../Engineering_job_emb_sys.sopcinfo
+SETTINGS_FILE := ../../../../../../../Test_area-debug/TEIS-51fc541f4b82b330dfbc279f73cc6cecf32eecc2/C-kurs/Task12/HW_C_engjob/HW_C_ingjob/software/C_eng_job_bsp/settings.bsp
+SOPC_FILE := ../../../../../../../Test_area-debug/TEIS-51fc541f4b82b330dfbc279f73cc6cecf32eecc2/C-kurs/Task12/HW_C_engjob/HW_C_ingjob/Engineering_job_emb_sys.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

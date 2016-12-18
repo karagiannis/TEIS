@@ -1,9 +1,9 @@
 # memory.gdb - GDB memory region definitions
 #
 # Machine generated for CPU 'Nios2_CPU' in SOPC Builder design 'Engineering_job_emb_sys'
-# SOPC Builder design path: ../../Engineering_job_emb_sys.sopcinfo
+# SOPC Builder design path: ../../../../../../../Test_area-debug/TEIS-51fc541f4b82b330dfbc279f73cc6cecf32eecc2/C-kurs/Task12/HW_C_engjob/HW_C_ingjob/Engineering_job_emb_sys.sopcinfo
 #
-# Generated: Sat Dec 03 09:50:55 CET 2016
+# Generated: Sun Dec 18 00:22:26 CET 2016
 
 # DO NOT MODIFY THIS FILE
 #

@@ -1,6 +1,18 @@
-22:43:08 **** Incremental Build of configuration Nios II for project C_eng_job_bsp ****
+16:58:31 **** Incremental Build of configuration Nios II for project C_eng_job_bsp ****
 make all 
-[BSP build complete]
+Makefile not up to date.
+../../../../../../../Test_area-debug/TEIS-51fc541f4b82b330dfbc279f73cc6cecf32eecc2/C-kurs/Task12/HW_C_engjob/HW_C_ingjob/software/C_eng_job_bsp/settings.bsp has been modified since the BSP Makefile was generated.
 
-22:43:09 Build Finished (took 733ms)
+Generate the BSP to update the Makefile, and then build again.
+
+To generate from Eclipse:
+ 1. Right-click the BSP project.
+ 2. In the Nios II Menu, click Generate BSP.
+
+To generate from the command line:
+ nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
+
+make: *** [makefile] Error 1
+
+16:58:31 Build Finished (took 452ms)
 

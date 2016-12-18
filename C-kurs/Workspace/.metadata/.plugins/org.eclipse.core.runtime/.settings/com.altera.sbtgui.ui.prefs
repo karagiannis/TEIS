@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\root\\Documents\\TEIS2016\\C-kurs\\Task12\\HW_C_engjob\\HW_C_ingjob\\software\\C_eng_job
-newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\root\\Documents\\TEIS2016\\C-kurs\\Task12\\HW_C_engjob\\HW_C_ingjob\\Engineering_job_emb_sys.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\root\\Documents\\TEIS2016\\C-kurs\\Task12\\HW_C_engjob\\HW_C_ingjob\\software\\C_eng_job_bsp
+newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\root\\Documents\\TEIS2016\\C-kurs\\C_extra_projekt\\software\\Floating_point
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\root\\Documents\\TEIS2016\\C-kurs\\C_extra_projekt\\embedded_system_case_5B.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\root\\Documents\\TEIS2016\\C-kurs\\C_extra_projekt\\software\\Floating_point_bsp
