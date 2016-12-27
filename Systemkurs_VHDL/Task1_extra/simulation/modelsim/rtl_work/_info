@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1_extra/simulation/modelsim
+Evhdl2_uppgift_1_extra
+Z1 w1482799677
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1_extra/vhdl2_uppgift_1_extra.vhd
+Z6 FC:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1_extra/vhdl2_uppgift_1_extra.vhd
+l0
+L7
+V>BV5ff1KW<GWAobBGLh>J1
+!s100 k169X[@kiYo@6WXcXmZ^F1
+Z7 OV;C;10.4d;61
+31
+Z8 !s110 1482804241
+!i10b 1
+Z9 !s108 1482804241.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1_extra/vhdl2_uppgift_1_extra.vhd|
+Z11 !s107 C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1_extra/vhdl2_uppgift_1_extra.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1
+Artl
+R2
+R3
+R4
+DEx4 work 21 vhdl2_uppgift_1_extra 0 22 >BV5ff1KW<GWAobBGLh>J1
+l44
+L27
+VamehNl5Z1l_U]?DTQb@1c3
+!s100 Goi2?V6aK0>J`Tj<9EXKh1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Evhdl2_uppgift_1_extra_vhd_tst
+Z14 w1482804230
+R2
+R3
+R4
+R0
+Z15 8C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1_extra/simulation/modelsim/vhdl2_uppgift_1_extra.vht
+Z16 FC:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1_extra/simulation/modelsim/vhdl2_uppgift_1_extra.vht
+l0
+L34
+VJZCJhofjAD@[b8@=idTV<2
+!s100 zkiM78do50V5fW0zgWnHb0
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1_extra/simulation/modelsim/vhdl2_uppgift_1_extra.vht|
+Z18 !s107 C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1_extra/simulation/modelsim/vhdl2_uppgift_1_extra.vht|
+!i113 1
+R12
+R13
+Avhdl2_uppgift_1_extra_arch
+R2
+R3
+R4
+DEx4 work 29 vhdl2_uppgift_1_extra_vhd_tst 0 22 JZCJhofjAD@[b8@=idTV<2
+l68
+L36
+Vim7H9MDiUb@PmRI10Q<_j3
+!s100 6o8ZR@4=6CiU[`jIIE2IQ2
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13

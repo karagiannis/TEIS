@@ -1,0 +1,20 @@
+Quartus Prime Archive log --	C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.qarlog
+
+Archive:	C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.qar
+Date:		Mon Dec 26 03:02:52 2016
+Quartus Prime		16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/db/stp3_auto_stripped.stp
+C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/output_files/Chain8.cdf
+C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/output_files/stp3.stp
+C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim/vhdl2_uppgift_1b.vht
+C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.csv
+C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.qpf
+C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.qsf
+C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.vhd
+c:/altera_lite/16.0/quartus/bin64/assignment_defaults.qdf
+	======= Total: 9 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

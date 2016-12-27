@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim
+Evhdl2_uppgift_1b
+Z1 w1482634282
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.vhd
+Z6 FC:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.vhd
+l0
+L7
+VoR0b_gF_nW4UoL8?kn2j91
+!s100 kgMLRSCjUG<cP=1N8nB@g0
+Z7 OV;C;10.4d;61
+31
+Z8 !s110 1482714119
+!i10b 1
+Z9 !s108 1482714119.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.vhd|
+Z11 !s107 C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1
+Artl
+R2
+R3
+R4
+DEx4 work 16 vhdl2_uppgift_1b 0 22 oR0b_gF_nW4UoL8?kn2j91
+l40
+L23
+V`O8Y@o[3Cf3UYhdBOen=D3
+!s100 13fb5a6kN5Y=Fc_m>;A8g1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Evhdl2_uppgift_1b_vhd_tst
+Z14 w1482634481
+R3
+R4
+R0
+Z15 8C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim/vhdl2_uppgift_1b.vht
+Z16 FC:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim/vhdl2_uppgift_1b.vht
+l0
+L31
+VXE1^`AaOMhHLFP74Y16o23
+!s100 ?FOlXYZH<N@EAGSMOWKc>1
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim/vhdl2_uppgift_1b.vht|
+Z18 !s107 C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim/vhdl2_uppgift_1b.vht|
+!i113 1
+R12
+R13
+Avhdl2_uppgift_1b_arch
+R3
+R4
+DEx4 work 24 vhdl2_uppgift_1b_vhd_tst 0 22 XE1^`AaOMhHLFP74Y16o23
+l61
+L33
+V:2ZY@:VSd6RcS]QKkadaQ2
+!s100 EQPP_RWDYk:N;3_@<kOA:1
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13

@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Mon Dec 26 01:34:28 2016
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Revision Name : vhdl2_uppgift_1b
+Top-level Entity Name : vhdl2_uppgift_1b
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 939
+Total pins : 33
+Total virtual pins : 0
+Total block memory bits : 589,824
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

@@ -1,0 +1,155 @@
+# Reading C:/altera_lite/16.0/modelsim_ase/tcl/vsim/pref.tcl
+# do vhdl2_uppgift_1b_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying C:/altera_lite/16.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 02:00:28 on Dec 26,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl2_uppgift_1b
+# -- Compiling architecture rtl of vhdl2_uppgift_1b
+# End time: 02:00:28 on Dec 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim/vhdl2_uppgift_1b.vht}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 02:00:28 on Dec 26,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim/vhdl2_uppgift_1b.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity vhdl2_uppgift_1b_vhd_tst
+# -- Compiling architecture vhdl2_uppgift_1b_arch of vhdl2_uppgift_1b_vhd_tst
+# ** Warning: C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim/vhdl2_uppgift_1b.vht(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim/vhdl2_uppgift_1b.vht(94): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 02:00:29 on Dec 26,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  vhdl2_uppgift_1b_vhd_tst
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" vhdl2_uppgift_1b_vhd_tst 
+# Start time: 02:00:29 on Dec 26,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.vhdl2_uppgift_1b_vhd_tst(vhdl2_uppgift_1b_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.vhdl2_uppgift_1b(rtl)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 20 ms
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+add wave -position insertpoint  \
+sim:/vhdl2_uppgift_1b_vhd_tst/i1/counter.H
+add wave -position insertpoint  \
+sim:/vhdl2_uppgift_1b_vhd_tst/i1/counter.V
+do vhdl2_uppgift_1b_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 02:01:59 on Dec 26,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/vhdl2_uppgift_1b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity vhdl2_uppgift_1b
+# -- Compiling architecture rtl of vhdl2_uppgift_1b
+# End time: 02:01:59 on Dec 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim/vhdl2_uppgift_1b.vht}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 02:01:59 on Dec 26,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim/vhdl2_uppgift_1b.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity vhdl2_uppgift_1b_vhd_tst
+# -- Compiling architecture vhdl2_uppgift_1b_arch of vhdl2_uppgift_1b_vhd_tst
+# ** Warning: C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim/vhdl2_uppgift_1b.vht(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/root/Documents/TEIS2016/Systemkurs_VHDL/Task1b/simulation/modelsim/vhdl2_uppgift_1b.vht(94): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 02:01:59 on Dec 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  vhdl2_uppgift_1b_vhd_tst
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" vhdl2_uppgift_1b_vhd_tst 
+# Start time: 02:02:01 on Dec 26,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.vhdl2_uppgift_1b_vhd_tst(vhdl2_uppgift_1b_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.vhdl2_uppgift_1b(rtl)
+# 
+# add wave *
+# add wave -position insertpoint  \
+# sim:/vhdl2_uppgift_1b_vhd_tst/i1/counter.H
+# add wave -position insertpoint  \
+# sim:/vhdl2_uppgift_1b_vhd_tst/i1/counter.V
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 20 ms
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /vhdl2_uppgift_1b_vhd_tst/i1
+# End time: 03:02:24 on Dec 26,2016, Elapsed time: 1:00:23
+# Errors: 0, Warnings: 9

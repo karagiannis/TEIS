@@ -1,4 +1,4 @@
---
+﻿--
 ------------------
 -- Company: TEIS AB
 -- Engineer: Lasse Karagiannis
@@ -37,8 +37,8 @@ use ieee.std_logic_unsigned.all;
 entity uppgift_vhdl_5_extra is
 port(
 		    clk 		: in std_logic;
-			 reset_n : in std_logic;
-			 key0 	: in std_logic;
+			 reset_n 	: in std_logic;
+			 key0 		: in std_logic;
 			 key1		: in std_logic;
 			 key2		: in std_logic;
 			 key3_lock_command: in std_logic;
@@ -53,26 +53,26 @@ end entity uppgift_vhdl_5_extra;
 architecture rtl of uppgift_vhdl_5_extra is
 
      signal reset_n_delay1 				: std_logic;
-	  signal	key0_delay1 					: std_logic;
-	  signal	key1_delay1						: std_logic;
-	  signal	key2_delay1						: std_logic;
+	  signal	key0_delay1 			: std_logic;
+	  signal	key1_delay1			: std_logic;
+	  signal	key2_delay1			: std_logic;
 	  signal	key3_lock_command_delay1	: std_logic;
 	  
-	  signal reset_n_delay2 				: std_logic;
-	  signal	key0_delay2 					: std_logic;
-	  signal	key1_delay2						: std_logic;
-	  signal	key2_delay2						: std_logic;
+	  signal 	reset_n_delay2 			: std_logic;
+	  signal	key0_delay2 			: std_logic;
+	  signal	key1_delay2			: std_logic;
+	  signal	key2_delay2			: std_logic;
 	  signal	key3_lock_command_delay2	: std_logic;
 
 		type door_states is (unlocked, locked);
 		signal door_lock_state : door_states;
 		
 		type key_input_states is (	first_button_correct,
-											second_button_correct_in_sequence,
-											final_third_button_correct_in_sequence,
-											button4_lock_button_is_pushed,
-											wrong_sequence, 
-											no_buttons_pushed);
+						second_button_correct_in_sequence,
+						final_third_button_correct_in_sequence,
+						button4_lock_button_is_pushed,
+						wrong_sequence, 
+						no_buttons_pushed);
 									
 		signal key_input_state : key_input_states;
 		
@@ -112,19 +112,15 @@ begin
 						when locked =>
 							if key_input_state = final_third_button_correct_in_sequence then
 								door_lock_state <= unlocked;
-							else
-								door_lock_state <= locked;
 							end if;
 							 
 						when unlocked	=>
 							if key_input_state = button4_lock_button_is_pushed then 
 								door_lock_state <= locked;
-							else
-								door_lock_state <= unlocked;
 							end if;						
 					end case;									
 			end if;
-		end process door_state_machine;
+		end process door_state_machine;--jag hör dig
 		
 		button_state_machine: process(clk,reset_n)
 		begin
@@ -156,9 +152,9 @@ begin
 							  when first_button_correct =>  --First button is correct
 									if (key2 = '0' AND old_key2 ='1') then
 										 key_input_state <= second_button_correct_in_sequence;
-										 old_key0 <= '0';
+										old_key0 <= '0';
 										 
-									elsif (key0_delay2 = '1' AND old_key0 ='0') then
+									elsif (key0 = '1' AND old_key0 ='0') then
 										   old_key0 <= '1'; --bouncing from previous transition do no transition							
 									elsif (key1 = '0' AND old_key1 ='1') then
 										key_input_state <= wrong_sequence; 								
