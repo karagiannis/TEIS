@@ -1,0 +1,62 @@
+EDA Netlist Writer report for vhdl2_uppgift_1_extra
+Sat Feb 11 19:55:16 2017
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. EDA Netlist Writer Summary
+  3. EDA Netlist Writer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                        ;
++---------------------------+---------------------------------------+
+; EDA Netlist Writer Status ; Successful - Sat Feb 11 19:55:16 2017 ;
+; Revision Name             ; vhdl2_uppgift_1_extra                 ;
+; Top-level Entity Name     ; vhdl2_uppgift_1_extra                 ;
+; Family                    ; Cyclone V                             ;
++---------------------------+---------------------------------------+
+
+
++-----------------------------+
+; EDA Netlist Writer Messages ;
++-----------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Sat Feb 11 19:55:15 2017
+Info: Command: quartus_eda --read_settings_files=on --write_settings_files=off vhdl2_uppgift_1_extra -c vhdl2_uppgift_1_extra --gen_testbench
+Info (119006): Selected device 5CSEMA5F31C6 for design "vhdl2_uppgift_1_extra"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (201002): Generated VHDL Test Bench File C:/Users/root/Documents/TEIS2016_copy/Systemkurs_VHDL/Task1_extra_NY/simulation/modelsim/vhdl2_uppgift_1_extra.vht for simulation
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 775 megabytes
+    Info: Processing ended: Sat Feb 11 19:55:16 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

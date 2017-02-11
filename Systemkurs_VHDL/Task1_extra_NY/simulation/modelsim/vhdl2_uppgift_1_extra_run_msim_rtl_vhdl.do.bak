@@ -1,0 +1,9 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/root/Documents/TEIS2016_copy/Systemkurs_VHDL/Task1_extra_NY/vhdl2_uppgift_1_extra.vhd}
+
